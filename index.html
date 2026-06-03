@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Educativa Superando Retos, Transformando Vidas</title>
+    <!-- Motor de diseño Tailwind CSS (Estilo Hallmark) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos modernos (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tipografía Inter (Estándar de diseño limpio) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0A2540',
+                            green: '#00D084',
+                            greenHover: '#00b874'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Patrón de fondo sutil tipo SaaS */
+        .bg-grid-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-green selection:text-brand-dark">
+
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i data-lucide="book-open" class="text-brand-dark h-6 w-6"></i>
+                    <span class="font-bold text-lg text-brand-dark tracking-tight">Superando Retos</span>
+                </div>
+                <div>
+                    <a href="#donar" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-brand-dark bg-brand-green hover:bg-brand-greenHover transition-colors shadow-sm">
+                        Apoyar Misión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative bg-white overflow-hidden bg-grid-pattern pt-16 pb-24 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Etiqueta de credibilidad -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-600 mb-8">
+                <span class="flex h-2 w-2 rounded-full bg-brand-green"></span>
+                Organización Legalmente Constituida en Ecuador
+            </div>
+
+            <h1 class="text-5xl md:text-6xl font-bold text-brand-dark tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+                Transformando Vidas a través de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-dark to-brand-green">Educación</span>
+            </h1>
+            
+            <p class="mt-4 max-w-2xl text-lg text-slate-600 mx-auto mb-10">
+                Somos el puente entre el desarrollo social y las comunidades vulnerables. Buscamos aliados estratégicos internacionales para ejecutar proyectos de impacto real y sostenible.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#donar" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-brand-dark bg-brand-green hover:bg-brand-greenHover transition-all shadow-sm hover:shadow-md gap-2">
+                    <i data-lucide="heart" class="h-5 w-5"></i>
+                    Donar Ahora
+                </a>
+                <a href="#postular" class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-base font-medium rounded-lg text-brand-dark bg-white hover:bg-slate-50 transition-all shadow-sm hover:shadow-md gap-2">
+                    <i data-lucide="file-text" class="h-5 w-5"></i>
+                    Postular a Financiamiento
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección de Transparencia (Estilo Dashboard) -->
+    <section class="py-20 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Transparencia Institucional</h2>
+                <p class="text-slate-300">Garantizamos auditoría y trazabilidad en cada donación. Operamos bajo los más estrictos estándares del Ministerio de Gobierno.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/10 border border-white/20 rounded-xl p-6 backdrop-blur-sm flex items-start gap-4">
+                    <div class="p-3 bg-brand-green/20 text-brand-green rounded-lg">
+                        <i data-lucide="shield-check" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium mb-1">Acuerdo Ministerial</p>
+                        <p class="font-mono text-lg font-semibold tracking-wide">MINEDUC-SEDMQ2025-00215-R</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 rounded-xl p-6 backdrop-blur-sm flex items-start gap-4">
+                    <div class="p-3 bg-brand-green/20 text-brand-green rounded-lg">
+                        <i data-lucide="fingerprint" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium mb-1">Código de Registro (SUIOS)</p>
+                        <p class="font-mono text-lg font-semibold tracking-wide">0000144103</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulo de Proyectos -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-brand-dark text-center mb-16 tracking-tight">Nuestras Áreas de Impacto</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-12 w-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green/10 group-hover:text-brand-green transition-colors text-slate-600">
+                        <i data-lucide="graduation-cap" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-3">Inclusión Educativa</h3>
+                    <p class="text-slate-600 leading-relaxed">Reducimos la brecha académica garantizando el acceso a educación de calidad, infraestructura digna y herramientas de aprendizaje modernas.</p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-12 w-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green/10 group-hover:text-brand-green transition-colors text-slate-600">
+                        <i data-lucide="users" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-3">Desarrollo Comunitario</h3>
+                    <p class="text-slate-600 leading-relaxed">Implementamos programas integrales que fortalecen el tejido social, empoderando líderes locales para un progreso económico sostenible.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-12 w-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green/10 group-hover:text-brand-green transition-colors text-slate-600">
+                        <i data-lucide="monitor" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-3">Innovación Tecnológica</h3>
+                    <p class="text-slate-600 leading-relaxed">Capacitamos en competencias digitales avanzadas para preparar a jóvenes y adultos frente a los desafíos del mercado laboral actual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 Fundación Educativa Superando Retos, Transformando Vidas.<br>Quito, Pichincha, Ecuador.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
