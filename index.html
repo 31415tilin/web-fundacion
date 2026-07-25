@@ -11,11 +11,11 @@
     <meta name="author" content="Fundación Educativa Superando Retos Transformando Vidas">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1e3a8a">
-    <link rel="canonical" href="https://www.fundacionsrtv.com">
+    <link rel="canonical" href="https://www.fundacionsuperandoretostransformandovidas.org">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.fundacionsrtv.com">
+    <meta property="og:url" content="https://www.fundacionsuperandoretostransformandovidas.org">
     <meta property="og:title" content="Fundación Educativa Superando Retos Transformando Vidas">
     <meta property="og:description" content="Orientación vocacional y profesional apoyada en la realidad laboral actual. Programas para jóvenes y adultos en Ecuador.">
     <meta property="og:image" content="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg">
@@ -34,7 +34,7 @@
       "@type": "EducationalOrganization",
       "name": "Fundación Educativa Superando Retos Transformando Vidas",
       "alternateName": "Fundación SRTV",
-      "url": "https://www.fundacionsrtv.com",
+      "url": "https://www.fundacionsuperandoretostransformandovidas.org",
       "email": "info@fundacionsuperandoretostransformandovidas.org",
       "telephone": "+593997841341",
       "address": { "@type": "PostalAddress", "addressCountry": "EC", "addressLocality": "Quito" },
@@ -61,7 +61,7 @@
                     },
                     boxShadow: {
                         'card': '0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04)',
-                        'card-hover': '0 2px 4px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.10), 0 32px 64px rgba(0,0,0,0.06)',
+                        'card-hover': '0 2px 4px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.08)',
                         'btn': '0 1px 2px rgba(30,58,138,0.08), 0 4px 12px rgba(30,58,138,0.20)',
                         'btn-hover': '0 2px 4px rgba(30,58,138,0.10), 0 8px 24px rgba(30,58,138,0.28)',
                     },
@@ -97,13 +97,13 @@
 
         /* === Premium card hover === */
         .card-lift {
-            transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-                        box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-                        border-color 0.32s ease;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        border-color 0.35s ease;
         }
         .card-lift:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.10), 0 32px 64px rgba(0,0,0,0.06);
+            transform: translateY(-8px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04), 0 20px 40px rgba(0,0,0,0.12), 0 40px 64px rgba(0,0,0,0.08);
             border-color: #93c5fd; /* Soft blue border on hover */
         }
 
@@ -131,8 +131,8 @@
             box-shadow: 0 1px 2px rgba(30,58,138,0.08), 0 4px 12px rgba(30,58,138,0.20);
         }
         .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 2px 4px rgba(30,58,138,0.10), 0 8px 24px rgba(30,58,138,0.28);
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(30,58,138,0.10), 0 12px 24px rgba(30,58,138,0.30);
         }
         .btn-primary:active { transform: translateY(0); }
 
@@ -143,7 +143,7 @@
         .section-label {
             display: inline-block;
             font-size: 0.7rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #1e3a8a; /* Deep blue */
@@ -151,23 +151,24 @@
         }
 
         /* === Nav scroll effect === */
-        .nav-scrolled { box-shadow: 0 1px 0 #e2e8f0, 0 4px 20px rgba(0,0,0,0.06); }
+        .nav-scrolled { box-shadow: 0 1px 0 #e2e8f0, 0 8px 24px rgba(0,0,0,0.04); }
 
         /* === Form inputs === */
         .form-input {
             width: 100%;
-            padding: 0.6rem 0.875rem;
+            padding: 0.75rem 1rem;
             background: rgba(15,23,42,0.6);
             border: 1px solid rgba(148,163,184,0.2);
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             color: #f8fafc;
             font-size: 0.875rem;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: all 0.2s;
             outline: none;
         }
         .form-input:focus {
             border-color: #3b82f6;
             box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+            background: rgba(15,23,42,0.8);
         }
         .form-input option { background: #1e293b; }
 
@@ -182,7 +183,7 @@
         #mobile-menu.open { display: block; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-brand-dark">
 
     <!-- ═══════════════════════════════════════
          NAVEGACIÓN FIJA
@@ -196,7 +197,7 @@
                     <a href="#inicio" class="flex-shrink-0 flex items-center gap-3 group" aria-label="Inicio – Fundación SRTV">
                         <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg"
                              alt="Logo Fundación Superando Retos Transformando Vidas"
-                             class="h-12 w-auto rounded-xl shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                             class="h-12 w-auto object-contain rounded-xl shadow-sm group-hover:shadow-md transition-all duration-300">
                         <span class="font-bold text-sm text-brand-dark hidden sm:block max-w-[180px] leading-snug">
                             Superando Retos<br>Transformando Vidas
                         </span>
@@ -214,7 +215,7 @@
 
                     <!-- CTA + mobile toggle -->
                     <div class="flex items-center gap-3">
-                        <a href="#contacto" class="btn-primary inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-brand-hover transition-colors">
+                        <a href="#contacto" class="btn-primary inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-brand-hover transition-colors">
                             Contacto
                         </a>
                         <button id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"
@@ -228,14 +229,14 @@
 
             <!-- Mobile menu -->
             <div id="mobile-menu" role="navigation" aria-label="Menú móvil"
-                 class="md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md">
+                 class="md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-xl absolute w-full">
                 <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
-                    <a href="#nosotros"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm transition-colors">Quiénes Somos</a>
-                    <a href="#programas"           class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm transition-colors">Programas</a>
-                    <a href="#anuncios"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm transition-colors">Novedades</a>
-                    <a href="#proyecto-quinsaloma" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm transition-colors">Proyecto</a>
-                    <a href="#transparencia"       class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm transition-colors">Documentos</a>
-                    <a href="#equipo"              class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm transition-colors">Equipo</a>
+                    <a href="#nosotros"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Quiénes Somos</a>
+                    <a href="#programas"           class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Programas</a>
+                    <a href="#anuncios"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Novedades</a>
+                    <a href="#proyecto-quinsaloma" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Proyecto</a>
+                    <a href="#transparencia"       class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Documentos</a>
+                    <a href="#equipo"              class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Equipo</a>
                 </div>
             </div>
         </nav>
@@ -246,24 +247,24 @@
     ═══════════════════════════════════════ -->
     <main id="inicio">
         <section aria-labelledby="hero-heading"
-                 class="relative bg-white overflow-hidden pt-28 sm:pt-32 pb-20 sm:pb-28 border-b border-slate-200">
+                 class="relative bg-white overflow-hidden pt-28 sm:pt-36 pb-20 sm:pb-32 border-b border-slate-200">
 
             <!-- Dot grid background -->
             <div class="absolute inset-0 bg-dot-grid opacity-60" aria-hidden="true"></div>
             <!-- Radial fade overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white pointer-events-none" aria-hidden="true"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
 
                 <!-- Badge -->
-                <div class="reveal inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-xs text-slate-500 mb-8 shadow-sm font-medium">
-                    <i data-lucide="award" class="h-3.5 w-3.5 text-brand-dark flex-shrink-0" aria-hidden="true"></i>
+                <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-xs text-slate-600 mb-8 shadow-sm font-semibold">
+                    <i data-lucide="award" class="h-4 w-4 text-brand-dark flex-shrink-0" aria-hidden="true"></i>
                     <span>Resolución Nro. MINEDUC-SEDMQ-2025-00215-R</span>
                 </div>
 
                 <!-- Headline -->
                 <h1 id="hero-heading"
-                    class="reveal reveal-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 max-w-4xl mx-auto leading-[1.12]">
+                    class="reveal reveal-delay-1 text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 max-w-5xl mx-auto leading-[1.15]">
                     Orientamos tu futuro
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-dark via-blue-600 to-sky-500">
                         profesional y vocacional
@@ -271,19 +272,19 @@
                 </h1>
 
                 <!-- Subheading -->
-                <p class="reveal reveal-delay-2 mt-2 max-w-xl text-base sm:text-lg text-slate-500 mx-auto mb-10 leading-relaxed">
+                <p class="reveal reveal-delay-2 mt-4 max-w-2xl text-base sm:text-lg text-slate-500 mx-auto mb-10 leading-relaxed font-medium">
                     Apoyados en la realidad del entorno laboral actual. Programas y proyectos orientados al desarrollo social y profesional de jóvenes y adultos.
                 </p>
 
                 <!-- CTAs -->
-                <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="#programas"
-                       class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                       class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                         Ver programas
                         <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
                     </a>
                     <a href="#nosotros"
-                       class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
+                       class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-700 font-bold text-sm hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
                         Conocer la fundación
                     </a>
                 </div>
@@ -296,12 +297,12 @@
         <section id="nosotros" aria-labelledby="nosotros-heading" class="py-20 sm:py-28 bg-brand-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     <!-- Texto Misión / Visión -->
                     <div class="reveal">
                         <span class="section-label">Fundación</span>
-                        <h2 id="nosotros-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-5">Nuestra Misión</h2>
+                        <h2 id="nosotros-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-6">Nuestra Misión</h2>
                         <p class="text-slate-600 mb-10 leading-relaxed text-base">
                             Desarrollar la educación complementaria, proponer y ejecutar programas y servicios de educación y fortalecimiento de conocimientos dirigidos a jóvenes y adultos, para que sean más competitivos al insertarse en la formación profesional y el mercado laboral.
                         </p>
@@ -314,51 +315,51 @@
 
                     <!-- Bento: Objetivos -->
                     <div class="reveal reveal-delay-2">
-                        <div class="bg-white rounded-2xl shadow-card border border-slate-100/80 p-8 relative overflow-hidden noise">
+                        <div class="bg-white rounded-3xl shadow-card border border-slate-100 p-8 sm:p-10 relative overflow-hidden noise">
                             <!-- Top accent line -->
-                            <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-dark via-blue-500 to-sky-400 rounded-t-2xl"></div>
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-dark via-blue-500 to-sky-400"></div>
 
-                            <h3 class="text-base font-bold text-slate-900 mb-6 flex items-center gap-2.5">
-                                <span class="flex h-8 w-8 rounded-lg bg-blue-50 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="target" class="h-4 w-4 text-brand-dark" aria-hidden="true"></i>
+                            <h3 class="text-lg font-bold text-slate-900 mb-8 flex items-center gap-3">
+                                <span class="flex h-10 w-10 rounded-xl bg-blue-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="target" class="h-5 w-5 text-brand-dark" aria-hidden="true"></i>
                                 </span>
                                 Objetivos Principales
                             </h3>
 
-                            <ul class="space-y-5" role="list">
-                                <li class="flex gap-3.5 items-start">
-                                    <span class="flex h-6 w-6 rounded-full bg-emerald-50 border border-emerald-200 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3.5 w-3.5 text-emerald-600" aria-hidden="true"></i>
+                            <ul class="space-y-6" role="list">
+                                <li class="flex gap-4 items-start">
+                                    <span class="flex h-7 w-7 rounded-full bg-emerald-50 border border-emerald-200 items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                        <i data-lucide="check" class="h-4 w-4 text-emerald-600" aria-hidden="true"></i>
                                     </span>
-                                    <span class="text-slate-600 text-sm leading-relaxed">Crear y promocionar programas educativos, cursos, talleres y capacitaciones de alta calidad.</span>
+                                    <span class="text-slate-600 text-sm leading-relaxed font-medium">Crear y promocionar programas educativos, cursos, talleres y capacitaciones de alta calidad.</span>
                                 </li>
-                                <li class="flex gap-3.5 items-start">
-                                    <span class="flex h-6 w-6 rounded-full bg-emerald-50 border border-emerald-200 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3.5 w-3.5 text-emerald-600" aria-hidden="true"></i>
+                                <li class="flex gap-4 items-start">
+                                    <span class="flex h-7 w-7 rounded-full bg-emerald-50 border border-emerald-200 items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                        <i data-lucide="check" class="h-4 w-4 text-emerald-600" aria-hidden="true"></i>
                                     </span>
-                                    <span class="text-slate-600 text-sm leading-relaxed">Visibilizar la educación como oportunidad para acceder a mejores ofertas laborales.</span>
+                                    <span class="text-slate-600 text-sm leading-relaxed font-medium">Visibilizar la educación como oportunidad para acceder a mejores ofertas laborales.</span>
                                 </li>
-                                <li class="flex gap-3.5 items-start">
-                                    <span class="flex h-6 w-6 rounded-full bg-emerald-50 border border-emerald-200 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3.5 w-3.5 text-emerald-600" aria-hidden="true"></i>
+                                <li class="flex gap-4 items-start">
+                                    <span class="flex h-7 w-7 rounded-full bg-emerald-50 border border-emerald-200 items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                        <i data-lucide="check" class="h-4 w-4 text-emerald-600" aria-hidden="true"></i>
                                     </span>
-                                    <span class="text-slate-600 text-sm leading-relaxed">Apoyar el desarrollo social a través de investigación, diseño e implementación de proyectos.</span>
+                                    <span class="text-slate-600 text-sm leading-relaxed font-medium">Apoyar el desarrollo social a través de investigación, diseño e implementación de proyectos.</span>
                                 </li>
                             </ul>
 
                             <!-- Mini stat strip -->
-                            <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-3 gap-4 text-center">
+                            <div class="mt-10 pt-6 border-t border-slate-100 grid grid-cols-3 gap-4 text-center">
                                 <div>
-                                    <p class="text-2xl font-extrabold text-brand-dark">3</p>
-                                    <p class="text-xs text-slate-500 mt-0.5">Programas activos</p>
+                                    <p class="text-3xl font-extrabold text-brand-dark">3</p>
+                                    <p class="text-xs text-slate-500 mt-1 font-medium">Programas</p>
                                 </div>
                                 <div>
-                                    <p class="text-2xl font-extrabold text-brand-dark">40h</p>
-                                    <p class="text-xs text-slate-500 mt-0.5">Carga horaria</p>
+                                    <p class="text-3xl font-extrabold text-brand-dark">40<span class="text-xl">h</span></p>
+                                    <p class="text-xs text-slate-500 mt-1 font-medium">Carga horaria</p>
                                 </div>
                                 <div>
-                                    <p class="text-2xl font-extrabold text-brand-dark">2025</p>
-                                    <p class="text-xs text-slate-500 mt-0.5">MINEDUC cert.</p>
+                                    <p class="text-3xl font-extrabold text-brand-dark">100<span class="text-xl">%</span></p>
+                                    <p class="text-xs text-slate-500 mt-1 font-medium">Aval Legal</p>
                                 </div>
                             </div>
                         </div>
@@ -373,45 +374,45 @@
         <section id="programas" aria-labelledby="programas-heading" class="py-20 sm:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="text-center mb-14 sm:mb-16 reveal">
+                <div class="text-center mb-16 sm:mb-20 reveal">
                     <span class="section-label">Oferta académica</span>
-                    <h2 id="programas-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    <h2 id="programas-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-6">
                         Programas de Orientación
                     </h2>
-                    <p class="text-slate-500 max-w-xl mx-auto text-base">
+                    <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                         Cursos diseñados para estudiantes de bachillerato, universidades, institutos técnicos y profesionales en búsqueda de crecimiento.
                     </p>
                 </div>
 
                 <!-- Bento grid de programas -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <!-- Programa 1 -->
-                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
+                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
                         <!-- Color top bar -->
-                        <div class="h-1 w-full bg-gradient-to-r from-blue-500 to-sky-400"></div>
-                        <div class="p-7 flex flex-col flex-1">
-                            <div class="flex items-start justify-between mb-5">
+                        <div class="h-1.5 w-full bg-gradient-to-r from-blue-500 to-sky-400"></div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-start justify-between mb-6">
                                 <span class="tag bg-blue-50 text-blue-700">Bachillerato</span>
-                                <span class="flex h-9 w-9 rounded-xl bg-blue-50 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="compass" class="h-4 w-4 text-blue-700" aria-hidden="true"></i>
+                                <span class="flex h-10 w-10 rounded-xl bg-blue-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="compass" class="h-5 w-5 text-blue-700" aria-hidden="true"></i>
                                 </span>
                             </div>
 
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Taller de Orientación con Test de Intereses
                             </h3>
-                            <p class="text-xs text-slate-400 font-medium mb-4 flex items-center gap-1.5">
-                                <i data-lucide="clock" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                            <p class="text-xs text-slate-400 font-semibold mb-5 flex items-center gap-1.5">
+                                <i data-lucide="clock" class="h-4 w-4" aria-hidden="true"></i>
                                 40 horas (Intensivo) · Presencial / Híbrida
                             </p>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">
-                                Identifica tus intereses vocacionales mediante instrumentos psicopedagógicos y elabora un plan personal de formación.
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
+                                Identifica tus intereses vocacionales mediante instrumentos psicopedagógicos y elabora un plan personal de formación estructurado.
                             </p>
 
-                            <div class="mt-auto pt-5 border-t border-slate-100">
+                            <div class="mt-auto pt-6 border-t border-slate-100">
                                 <a href="#contacto"
-                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                                     Inscribirse
                                     <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
                                 </a>
@@ -420,34 +421,34 @@
                     </article>
 
                     <!-- Programa 2 — Featured (slightly elevated) -->
-                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group relative">
+                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group relative">
                         <!-- Featured badge -->
-                        <div class="absolute top-3.5 right-3.5 z-10">
-                            <span class="tag bg-brand-dark text-white shadow-btn text-[0.6rem]">Popular</span>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="tag bg-brand-dark text-white shadow-btn text-xs px-3 py-1">Popular</span>
                         </div>
-                        <div class="h-1 w-full bg-gradient-to-r from-indigo-500 to-purple-400"></div>
-                        <div class="p-7 flex flex-col flex-1">
-                            <div class="flex items-start justify-between mb-5">
+                        <div class="h-1.5 w-full bg-gradient-to-r from-indigo-500 to-purple-400"></div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-start justify-between mb-6">
                                 <span class="tag bg-indigo-50 text-indigo-700">Bach. / Superior</span>
-                                <span class="flex h-9 w-9 rounded-xl bg-indigo-50 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="trending-up" class="h-4 w-4 text-indigo-700" aria-hidden="true"></i>
+                                <span class="flex h-10 w-10 rounded-xl bg-indigo-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="trending-up" class="h-5 w-5 text-indigo-700" aria-hidden="true"></i>
                                 </span>
                             </div>
 
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Taller Intensivo de Orientación Vocacional
                             </h3>
-                            <p class="text-xs text-slate-400 font-medium mb-4 flex items-center gap-1.5">
-                                <i data-lucide="clock" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                            <p class="text-xs text-slate-400 font-semibold mb-5 flex items-center gap-1.5">
+                                <i data-lucide="clock" class="h-4 w-4" aria-hidden="true"></i>
                                 40 horas · Presencial / Híbrida
                             </p>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
                                 Análisis de las carreras más demandadas (IA, Energías renovables) y oferta académica en Ecuador con más de 4.500 carreras.
                             </p>
 
-                            <div class="mt-auto pt-5 border-t border-slate-100">
+                            <div class="mt-auto pt-6 border-t border-slate-100">
                                 <a href="#contacto"
-                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                                     Inscribirse
                                     <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
                                 </a>
@@ -456,30 +457,30 @@
                     </article>
 
                     <!-- Programa 3 -->
-                    <article class="reveal reveal-delay-3 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
-                        <div class="h-1 w-full bg-gradient-to-r from-cyan-500 to-teal-400"></div>
-                        <div class="p-7 flex flex-col flex-1">
-                            <div class="flex items-start justify-between mb-5">
+                    <article class="reveal reveal-delay-3 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="h-1.5 w-full bg-gradient-to-r from-cyan-500 to-teal-400"></div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-start justify-between mb-6">
                                 <span class="tag bg-cyan-50 text-cyan-700">Universitarios</span>
-                                <span class="flex h-9 w-9 rounded-xl bg-cyan-50 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="lightbulb" class="h-4 w-4 text-cyan-700" aria-hidden="true"></i>
+                                <span class="flex h-10 w-10 rounded-xl bg-cyan-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="lightbulb" class="h-5 w-5 text-cyan-700" aria-hidden="true"></i>
                                 </span>
                             </div>
 
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Autoconocimiento y Toma de Decisiones
                             </h3>
-                            <p class="text-xs text-slate-400 font-medium mb-4 flex items-center gap-1.5">
-                                <i data-lucide="clock" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                            <p class="text-xs text-slate-400 font-semibold mb-5 flex items-center gap-1.5">
+                                <i data-lucide="clock" class="h-4 w-4" aria-hidden="true"></i>
                                 8 semanas (Fines de semana) · Híbrida
                             </p>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
                                 Estrategias de inserción laboral, elaboración de CV profesional, LinkedIn y emprendimiento comunitario.
                             </p>
 
-                            <div class="mt-auto pt-5 border-t border-slate-100">
+                            <div class="mt-auto pt-6 border-t border-slate-100">
                                 <a href="#contacto"
-                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                                     Inscribirse
                                     <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
                                 </a>
@@ -490,8 +491,8 @@
                 </div>
 
                 <!-- Nota inferior -->
-                <p class="text-center text-xs text-slate-400 mt-8">
-                    Modalidades presencial e híbrida disponibles. Contáctanos para consultar disponibilidad y horarios.
+                <p class="text-center text-sm font-medium text-slate-400 mt-12 bg-slate-50 py-3 rounded-full border border-slate-100 w-max mx-auto px-6">
+                    Modalidades presencial e híbrida disponibles. Contáctanos para consultar disponibilidad.
                 </p>
             </div>
         </section>
@@ -503,212 +504,212 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <!-- Encabezado -->
-                <div class="text-center mb-14 sm:mb-16 reveal">
+                <div class="text-center mb-16 reveal">
                     <span class="section-label">Novedades</span>
-                    <h2 id="anuncios-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    <h2 id="anuncios-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
                         Cursos Prácticos Disponibles
                     </h2>
-                    <p class="text-slate-500 max-w-2xl mx-auto text-base leading-relaxed">
+                    <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                         Amplía tus competencias y abre nuevas oportunidades profesionales con nuestros cursos prácticos.
                         <span class="font-semibold text-slate-700">¡Inscripciones abiertas!</span>
                     </p>
                 </div>
 
                 <!-- Grid 2×2 para 4 cursos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     <!-- ── Curso 1: Habilidades Blandas ── -->
-                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
+                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
                         <!-- Cabecera visual -->
-                        <div class="relative h-56 overflow-hidden flex-shrink-0">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
                             <img src="promo1.jpg" alt="Flyer promocional: Habilidades Blandas en Entornos Laborales"
-                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                             <!-- Texto flotante sobre el banner -->
-                            <div class="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-slate-900/80 to-transparent">
-                                <p class="text-white/90 text-xs font-semibold uppercase tracking-widest">Curso práctico</p>
-                                <p class="text-white text-sm font-bold leading-snug mt-0.5">Habilidades Blandas en Entornos Laborales</p>
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Habilidades Blandas en Entornos Laborales</p>
                             </div>
                             <!-- Badge estado -->
-                            <div class="absolute top-3.5 left-3.5">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white text-brand-dark shadow-sm">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
                                     Inscripciones Abiertas
                                 </span>
                             </div>
                         </div>
 
                         <!-- Cuerpo -->
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Importancia de las Habilidades Blandas
                             </h3>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-3">
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">
                                 Las habilidades blandas como competencias transversales que inciden directamente en la eficacia y sostenibilidad del entorno laboral. Descubre tus fortalezas y trabaja tus áreas de mejora.
                             </p>
                             <!-- Preguntas motivadoras -->
-                            <ul class="space-y-1.5 mb-5" role="list">
-                                <li class="flex items-start gap-2 text-xs text-slate-500">
-                                    <i data-lucide="circle-help" class="h-3.5 w-3.5 text-blue-500 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                            <ul class="space-y-2 mb-8" role="list">
+                                <li class="flex items-start gap-2.5 text-sm font-medium text-slate-600">
+                                    <i data-lucide="circle-help" class="h-4 w-4 text-blue-500 flex-shrink-0" aria-hidden="true"></i>
                                     ¿Qué habilidades son tu fortaleza?
                                 </li>
-                                <li class="flex items-start gap-2 text-xs text-slate-500">
-                                    <i data-lucide="circle-help" class="h-3.5 w-3.5 text-blue-500 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                                <li class="flex items-start gap-2.5 text-sm font-medium text-slate-600">
+                                    <i data-lucide="circle-help" class="h-4 w-4 text-blue-500 flex-shrink-0" aria-hidden="true"></i>
                                     ¿En cuáles crees que tienes deficiencias?
                                 </li>
                             </ul>
                             <!-- Footer de tarjeta -->
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                                <span class="inline-flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                                    <i data-lucide="users" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold">
+                                    <i data-lucide="users" class="h-4 w-4" aria-hidden="true"></i>
                                     Jóvenes y profesionales
                                 </span>
-                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
                                     Inscribirme
-                                    <i data-lucide="arrow-right" class="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" aria-hidden="true"></i>
+                                    <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- ── Curso 2: Emprendimiento y Negocios ── -->
-                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
-                        <div class="relative h-56 overflow-hidden flex-shrink-0">
+                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
                             <img src="promo2.jpg" alt="Flyer promocional: Emprendimiento y Pensamiento Estratégico"
-                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-slate-900/80 to-transparent">
-                                <p class="text-white/90 text-xs font-semibold uppercase tracking-widest">Curso práctico</p>
-                                <p class="text-white text-sm font-bold leading-snug mt-0.5">Emprendimiento y Pensamiento Estratégico</p>
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Emprendimiento y Pensamiento Estratégico</p>
                             </div>
-                            <div class="absolute top-3.5 left-3.5">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white text-brand-dark shadow-sm">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
                                     Inscripciones Abiertas
                                 </span>
                             </div>
                         </div>
 
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Puntos Clave del Proyecto Empresarial Exitoso
                             </h3>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-3">
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">
                                 El emprendimiento y los negocios se sustentan en una visión clara y resiliente. Aprende planificación estratégica, gestión financiera, marketing y liderazgo efectivo para escalar tus proyectos.
                             </p>
                             <!-- Tags de contenido -->
-                            <div class="flex flex-wrap gap-1.5 mb-5" role="list" aria-label="Temas del curso">
-                                <span role="listitem" class="tag bg-slate-100 text-brand-dark border border-slate-200 text-[0.65rem]">Liderazgo</span>
-                                <span role="listitem" class="tag bg-slate-100 text-brand-dark border border-slate-200 text-[0.65rem]">Finanzas</span>
-                                <span role="listitem" class="tag bg-slate-100 text-brand-dark border border-slate-200 text-[0.65rem]">Marketing</span>
-                                <span role="listitem" class="tag bg-slate-100 text-brand-dark border border-slate-200 text-[0.65rem]">Digitalización</span>
+                            <div class="flex flex-wrap gap-2 mb-8" role="list" aria-label="Temas del curso">
+                                <span role="listitem" class="tag bg-slate-50 text-brand-dark border border-slate-200 text-xs">Liderazgo</span>
+                                <span role="listitem" class="tag bg-slate-50 text-brand-dark border border-slate-200 text-xs">Finanzas</span>
+                                <span role="listitem" class="tag bg-slate-50 text-brand-dark border border-slate-200 text-xs">Marketing</span>
+                                <span role="listitem" class="tag bg-slate-50 text-brand-dark border border-slate-200 text-xs">Digitalización</span>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                                <span class="inline-flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                                    <i data-lucide="lightbulb" class="h-3.5 w-3.5" aria-hidden="true"></i>
-                                    Emprendedores y ejecutivos
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold">
+                                    <i data-lucide="lightbulb" class="h-4 w-4" aria-hidden="true"></i>
+                                    Emprendedores
                                 </span>
-                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
                                     Inscribirme
-                                    <i data-lucide="arrow-right" class="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" aria-hidden="true"></i>
+                                    <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- ── Curso 3: Investigación Aplicada ── -->
-                    <article class="reveal reveal-delay-3 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
-                        <div class="relative h-56 overflow-hidden flex-shrink-0">
+                    <article class="reveal reveal-delay-3 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
                             <img src="promo3.jpg" alt="Flyer promocional: Investigación Aplicada al Desarrollo Social"
-                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-slate-900/80 to-transparent">
-                                <p class="text-white/90 text-xs font-semibold uppercase tracking-widest">Curso práctico</p>
-                                <p class="text-white text-sm font-bold leading-snug mt-0.5">Investigación Aplicada al Desarrollo Social</p>
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Investigación Aplicada al Desarrollo Social</p>
                             </div>
-                            <div class="absolute top-3.5 left-3.5">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white text-brand-dark shadow-sm">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
                                     Inscripciones Abiertas
                                 </span>
                             </div>
                         </div>
 
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Investigación Aplicada e Investigación Científica
                             </h3>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-3">
-                                Aprende cómo la investigación aplicada resuelve problemas concretos de comunidades, y cómo la investigación científica forma profesionales críticos en la educación superior tecnológica.
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">
+                                Aprende cómo la investigación aplicada resuelve problemas concretos de comunidades, y cómo la investigación científica forma profesionales críticos en la educación superior.
                             </p>
                             <!-- Dos pilares del curso -->
-                            <div class="grid grid-cols-2 gap-3 mb-5">
-                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
-                                    <p class="text-xs font-bold text-brand-dark mb-0.5">Investigación Social</p>
-                                    <p class="text-[0.68rem] text-slate-500 leading-relaxed">Enfoque participativo y comunitario</p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                                    <p class="text-xs font-bold text-brand-dark mb-1 uppercase tracking-wider">Social</p>
+                                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Enfoque participativo y comunitario</p>
                                 </div>
-                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
-                                    <p class="text-xs font-bold text-brand-dark mb-0.5">Investigación Científica</p>
-                                    <p class="text-[0.68rem] text-slate-500 leading-relaxed">Metodologías rigurosas y sistemáticas</p>
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                                    <p class="text-xs font-bold text-brand-dark mb-1 uppercase tracking-wider">Científica</p>
+                                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Metodologías sistemáticas</p>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                                <span class="inline-flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                                    <i data-lucide="graduation-cap" class="h-3.5 w-3.5" aria-hidden="true"></i>
-                                    Estudiantes universitarios
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold">
+                                    <i data-lucide="graduation-cap" class="h-4 w-4" aria-hidden="true"></i>
+                                    Universitarios
                                 </span>
-                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
                                     Inscribirme
-                                    <i data-lucide="arrow-right" class="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" aria-hidden="true"></i>
+                                    <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- ── Curso 4: Fondos No Reembolsables ── -->
-                    <article class="reveal reveal-delay-4 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
-                        <div class="relative h-56 overflow-hidden flex-shrink-0">
+                    <article class="reveal reveal-delay-4 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
                             <img src="promo4.jpg" alt="Flyer promocional: Cómo Obtener Fondos No Reembolsables"
-                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-slate-900/80 to-transparent">
-                                <p class="text-white/90 text-xs font-semibold uppercase tracking-widest">Curso práctico</p>
-                                <p class="text-white text-sm font-bold leading-snug mt-0.5">Cómo Obtener Fondos No Reembolsables</p>
+                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Cómo Obtener Fondos No Reembolsables</p>
                             </div>
-                            <div class="absolute top-3.5 left-3.5">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white text-brand-dark shadow-sm">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span>
                                     Inscripciones Abiertas
                                 </span>
                             </div>
                         </div>
 
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-brand-dark transition-colors">
-                                Fondos No Reembolsables para Proyectos y Negocios
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
+                                Fondos No Reembolsables para Proyectos
                             </h3>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5 flex-1">
                                 Recursos para impulsar el desarrollo comunitario y emprendimientos. Aprende a postular ante agencias de cooperación, gobiernos, Unión Europea y fundaciones privadas.
                             </p>
                             <!-- Mini grid de quiénes pueden postular -->
-                            <div class="grid grid-cols-3 gap-2 mb-5 text-center">
-                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5">
-                                    <i data-lucide="users-round" class="h-4 w-4 text-brand-dark mx-auto mb-1" aria-hidden="true"></i>
-                                    <p class="text-[0.65rem] font-semibold text-slate-600 leading-tight">ONGs y Fundaciones</p>
+                            <div class="grid grid-cols-3 gap-3 mb-8 text-center">
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                                    <i data-lucide="users-round" class="h-5 w-5 text-brand-dark mx-auto mb-1.5" aria-hidden="true"></i>
+                                    <p class="text-[0.65rem] font-bold text-slate-700 leading-tight">ONGs</p>
                                 </div>
-                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5">
-                                    <i data-lucide="building-2" class="h-4 w-4 text-brand-dark mx-auto mb-1" aria-hidden="true"></i>
-                                    <p class="text-[0.65rem] font-semibold text-slate-600 leading-tight">Org. Comunitarias</p>
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                                    <i data-lucide="building-2" class="h-5 w-5 text-brand-dark mx-auto mb-1.5" aria-hidden="true"></i>
+                                    <p class="text-[0.65rem] font-bold text-slate-700 leading-tight">Org. Comunit.</p>
                                 </div>
-                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5">
-                                    <i data-lucide="award" class="h-4 w-4 text-brand-dark mx-auto mb-1" aria-hidden="true"></i>
-                                    <p class="text-[0.65rem] font-semibold text-slate-600 leading-tight">Inst. Cívicas</p>
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                                    <i data-lucide="award" class="h-5 w-5 text-brand-dark mx-auto mb-1.5" aria-hidden="true"></i>
+                                    <p class="text-[0.65rem] font-bold text-slate-700 leading-tight">Inst. Cívicas</p>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-100 mt-auto">
-                                <span class="inline-flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                                    <i data-lucide="circle-dollar-sign" class="h-3.5 w-3.5" aria-hidden="true"></i>
-                                    Proyectos sociales y negocios
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold">
+                                    <i data-lucide="circle-dollar-sign" class="h-4 w-4" aria-hidden="true"></i>
+                                    Proyectos sociales
                                 </span>
-                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                <a href="#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
                                     Inscribirme
-                                    <i data-lucide="arrow-right" class="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" aria-hidden="true"></i>
+                                    <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -717,10 +718,10 @@
                 </div><!-- /grid 2×2 -->
 
                 <!-- CTA inferior -->
-                <div class="reveal mt-12 text-center">
-                    <p class="text-slate-500 text-sm mb-4">¿Tienes dudas sobre qué curso se adapta mejor a tu perfil?</p>
+                <div class="reveal mt-16 text-center bg-white border border-slate-200 rounded-3xl p-8 shadow-sm max-w-3xl mx-auto">
+                    <p class="text-slate-600 text-base font-medium mb-6">¿Tienes dudas sobre qué curso se adapta mejor a tu perfil o el de tu equipo?</p>
                     <a href="#contacto"
-                       class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                       class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                         Consultar con un asesor
                         <i data-lucide="message-circle" class="h-4 w-4" aria-hidden="true"></i>
                     </a>
@@ -736,46 +737,46 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <!-- Encabezado de sección -->
-                <div class="text-center mb-12 sm:mb-14 reveal">
+                <div class="text-center mb-16 reveal">
                     <span class="section-label">Institución legalmente constituida</span>
-                    <h2 id="transparencia-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    <h2 id="transparencia-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
                         Transparencia y Documentos Oficiales
                     </h2>
-                    <p class="text-slate-500 max-w-xl mx-auto text-base leading-relaxed">
+                    <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                         Operamos con plena legalidad y transparencia. Aquí puedes consultar y descargar los documentos que acreditan nuestra personería jurídica y registro oficial.
                     </p>
                 </div>
 
                 <!-- Grid bento: 2 tarjetas de descarga -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
                     <!-- Tarjeta 1: Resolución Ministerial -->
-                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
+                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
                         <!-- Barra superior con gradiente corporativo -->
-                        <div class="h-1 w-full bg-gradient-to-r from-brand-dark via-blue-600 to-sky-500"></div>
+                        <div class="h-1.5 w-full bg-gradient-to-r from-brand-dark via-blue-600 to-sky-500"></div>
 
-                        <div class="p-7 sm:p-8 flex flex-col flex-1">
+                        <div class="p-8 flex flex-col flex-1">
                             <!-- Ícono superior -->
-                            <div class="flex items-start justify-between mb-6">
-                                <div class="flex h-12 w-12 rounded-2xl bg-blue-50 border border-blue-100 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="file-text" class="h-6 w-6 text-brand-dark" aria-hidden="true"></i>
+                            <div class="flex items-start justify-between mb-8">
+                                <div class="flex h-14 w-14 rounded-2xl bg-blue-50 border border-blue-100 items-center justify-center flex-shrink-0 shadow-sm">
+                                    <i data-lucide="file-text" class="h-7 w-7 text-brand-dark" aria-hidden="true"></i>
                                 </div>
-                                <span class="tag bg-blue-50 text-brand-dark border border-blue-100">MINEDUC · 2025</span>
+                                <span class="tag bg-blue-50 text-brand-dark border border-blue-100 px-3 py-1">MINEDUC · 2025</span>
                             </div>
 
                             <!-- Contenido -->
-                            <h3 class="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Resolución Ministerial MINEDUC
                             </h3>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">
-                                Resolución Nro. <strong class="text-slate-700 font-semibold">MINEDUC-SEDMQ-2025-00215-R</strong> expedida el 23 de abril de 2025, que aprueba el estatuto y otorga la personalidad jurídica a la Fundación.
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
+                                Resolución Nro. <strong class="text-slate-700 font-bold">MINEDUC-SEDMQ-2025-00215-R</strong> expedida el 23 de abril de 2025, que aprueba el estatuto y otorga la personalidad jurídica a la Fundación.
                             </p>
 
                             <!-- Botón de descarga -->
-                            <div class="mt-auto pt-5 border-t border-slate-100">
+                            <div class="mt-auto pt-6 border-t border-slate-100">
                                 <a href="MINEDUC-SEDMQ-2025-00215-R.pdf" download="Resolucion-MINEDUC-SEDMQ-2025-00215-R.pdf"
                                    aria-label="Descargar Resolución Ministerial MINEDUC-SEDMQ-2025-00215-R"
-                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                                     <i data-lucide="download" class="h-4 w-4" aria-hidden="true"></i>
                                     Descargar documento
                                 </a>
@@ -784,32 +785,32 @@
                     </article>
 
                     <!-- Tarjeta 2: Certificado SUIOS -->
-                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-card group">
+                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
                         <!-- Barra superior con gradiente secundario -->
-                        <div class="h-1 w-full bg-gradient-to-r from-brand-dark via-blue-500 to-sky-400"></div>
+                        <div class="h-1.5 w-full bg-gradient-to-r from-brand-dark via-blue-500 to-sky-400"></div>
 
-                        <div class="p-7 sm:p-8 flex flex-col flex-1">
+                        <div class="p-8 flex flex-col flex-1">
                             <!-- Ícono superior -->
-                            <div class="flex items-start justify-between mb-6">
-                                <div class="flex h-12 w-12 rounded-2xl bg-blue-50 border border-blue-100 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="shield-check" class="h-6 w-6 text-brand-dark" aria-hidden="true"></i>
+                            <div class="flex items-start justify-between mb-8">
+                                <div class="flex h-14 w-14 rounded-2xl bg-blue-50 border border-blue-100 items-center justify-center flex-shrink-0 shadow-sm">
+                                    <i data-lucide="shield-check" class="h-7 w-7 text-brand-dark" aria-hidden="true"></i>
                                 </div>
-                                <span class="tag bg-blue-50 text-brand-dark border border-blue-100">SUIOS · 2025</span>
+                                <span class="tag bg-blue-50 text-brand-dark border border-blue-100 px-3 py-1">SUIOS · 2025</span>
                             </div>
 
                             <!-- Contenido -->
-                            <h3 class="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
                                 Certificado de Registro SUIOS
                             </h3>
-                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-7">
-                                Constancia de registro oficial en el Sistema Unificado de Información de las Organizaciones Sociales. Código SUIOS: <strong class="text-slate-700 font-semibold">0000144103</strong>, emitido el 16 de junio de 2025.
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
+                                Constancia de registro oficial en el Sistema Unificado de Información de las Organizaciones Sociales. Código SUIOS: <strong class="text-slate-700 font-bold">0000144103</strong>, emitido el 16 de junio de 2025.
                             </p>
 
                             <!-- Botón de descarga -->
-                            <div class="mt-auto pt-5 border-t border-slate-100">
+                            <div class="mt-auto pt-6 border-t border-slate-100">
                                 <a href="SUIOS-0000144103.pdf" download="Certificado-SUIOS-0000144103.pdf"
                                    aria-label="Descargar Certificado de Registro SUIOS 0000144103"
-                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                                   class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors">
                                     <i data-lucide="download" class="h-4 w-4" aria-hidden="true"></i>
                                     Descargar documento
                                 </a>
@@ -829,33 +830,33 @@
             <!-- Dot-grid decorativo sobre fondo oscuro -->
             <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #94a3b8 1px, transparent 1px); background-size: 28px 28px;" aria-hidden="true"></div>
             <!-- Acento de color superior -->
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-dark via-blue-400 to-brand-hover" aria-hidden="true"></div>
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-dark via-blue-500 to-sky-400" aria-hidden="true"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <!-- Encabezado -->
-                <div class="text-center mb-12 sm:mb-14 reveal">
-                    <span class="inline-block text-[0.7rem] font-bold tracking-[0.12em] uppercase text-blue-400 mb-3">Proyecto Social · Quinsaloma, Los Ríos</span>
-                    <h2 id="quinsaloma-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-5 leading-[1.12]">
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-block text-[0.7rem] font-bold tracking-[0.12em] uppercase text-blue-400 mb-4 bg-blue-900/30 px-4 py-1.5 rounded-full border border-blue-800/50">Proyecto Social · Quinsaloma, Los Ríos</span>
+                    <h2 id="quinsaloma-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6 leading-[1.12]">
                         Sabores de Quinsaloma
                     </h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                    <p class="text-slate-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-medium">
                         Unidad de producción de licores artesanales con identidad territorial. Un proyecto de inclusión productiva para jóvenes y mujeres rurales del cantón Quinsaloma.
                     </p>
                 </div>
 
                 <!-- Bento principal: video + datos -->
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-7 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
 
                     <!-- ── Reproductor de video (ocupa 3/5 en lg) ── -->
                     <div class="reveal reveal-delay-1 lg:col-span-3">
-                        <div class="relative bg-slate-800 rounded-2xl border border-slate-700/60 overflow-hidden shadow-2xl group">
+                        <div class="relative bg-slate-800 rounded-3xl border border-slate-700/60 overflow-hidden shadow-2xl group ring-1 ring-white/10">
                             
                             <!-- Reproductor Local Activo -->
                             <video 
                                 controls 
                                 preload="metadata"
-                                class="w-full aspect-video object-cover rounded-2xl bg-black">
+                                class="w-full aspect-video object-cover bg-black">
                                 <source src="sabores-quinsaloma.mp4" type="video/mp4">
                                 Tu navegador no soporta la reproducción de video.
                             </video>
@@ -863,85 +864,51 @@
                         </div>
 
                         <!-- Pie del reproductor -->
-                        <p class="text-slate-500 text-xs mt-3 text-center flex items-center justify-center gap-1.5">
-                            <i data-lucide="info" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                        <p class="text-slate-500 text-xs font-semibold mt-4 text-center flex items-center justify-center gap-2">
+                            <i data-lucide="info" class="h-4 w-4" aria-hidden="true"></i>
                             Proyecto impulsado por la Fundación Educativa Superando Retos Transformando Vidas
                         </p>
                     </div>
 
                     <!-- ── Datos clave del proyecto (ocupa 2/5 en lg) ── -->
-                    <div class="reveal reveal-delay-2 lg:col-span-2 flex flex-col gap-4">
+                    <div class="reveal reveal-delay-2 lg:col-span-2 flex flex-col gap-5">
 
                         <!-- Card: Descripción general -->
-                        <div class="bg-slate-800/60 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6">
-                            <h3 class="text-white font-bold text-base mb-3 flex items-center gap-2.5">
-                                <span class="flex h-8 w-8 rounded-lg bg-brand-dark/30 items-center justify-center flex-shrink-0">
-                                    <i data-lucide="sprout" class="h-4 w-4 text-blue-400" aria-hidden="true"></i>
+                        <div class="bg-slate-800/60 backdrop-blur-sm rounded-3xl border border-slate-700/50 p-8 shadow-lg">
+                            <h3 class="text-white font-bold text-lg mb-4 flex items-center gap-3">
+                                <span class="flex h-10 w-10 rounded-xl bg-blue-500/20 items-center justify-center flex-shrink-0 border border-blue-500/30">
+                                    <i data-lucide="sprout" class="h-5 w-5 text-blue-400" aria-hidden="true"></i>
                                 </span>
                                 Sobre el Proyecto
                             </h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
+                            <p class="text-slate-400 text-sm leading-relaxed font-medium">
                                 Implementación de una unidad agroindustrial piloto para la producción de licores artesanales a partir de frutas tropicales locales, liderada por jóvenes rurales.
                             </p>
                         </div>
 
                         <!-- Mini-stats bento -->
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 p-4 text-center">
-                                <p class="text-2xl font-extrabold text-white mb-0.5">500</p>
-                                <p class="text-slate-400 text-xs leading-tight">Jóvenes rurales beneficiados</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-800/60 rounded-3xl border border-slate-700/50 p-5 text-center shadow-lg">
+                                <p class="text-3xl font-extrabold text-white mb-1">500</p>
+                                <p class="text-slate-400 text-xs font-semibold leading-tight">Jóvenes rurales beneficiados</p>
                             </div>
-                            <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 p-4 text-center">
-                                <p class="text-2xl font-extrabold text-white mb-0.5">≥40%</p>
-                                <p class="text-slate-400 text-xs leading-tight">Participación femenina</p>
+                            <div class="bg-slate-800/60 rounded-3xl border border-slate-700/50 p-5 text-center shadow-lg">
+                                <p class="text-3xl font-extrabold text-white mb-1">≥40<span class="text-xl">%</span></p>
+                                <p class="text-slate-400 text-xs font-semibold leading-tight">Participación femenina</p>
                             </div>
-                            <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 p-4 text-center">
-                                <p class="text-2xl font-extrabold text-white mb-0.5">8</p>
-                                <p class="text-slate-400 text-xs leading-tight">Meses de ejecución</p>
+                            <div class="bg-slate-800/60 rounded-3xl border border-slate-700/50 p-5 text-center shadow-lg">
+                                <p class="text-3xl font-extrabold text-white mb-1">8</p>
+                                <p class="text-slate-400 text-xs font-semibold leading-tight">Meses de ejecución</p>
                             </div>
-                            <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 p-4 text-center">
-                                <p class="text-2xl font-extrabold text-white mb-0.5">3</p>
-                                <p class="text-slate-400 text-xs leading-tight">Recetas artesanales validadas</p>
+                            <div class="bg-slate-800/60 rounded-3xl border border-slate-700/50 p-5 text-center shadow-lg">
+                                <p class="text-3xl font-extrabold text-white mb-1">3</p>
+                                <p class="text-slate-400 text-xs font-semibold leading-tight">Recetas artesanales validadas</p>
                             </div>
-                        </div>
-
-                        <!-- Pilares del proyecto -->
-                        <div class="bg-slate-800/60 rounded-2xl border border-slate-700/50 p-5">
-                            <h3 class="text-white font-bold text-sm mb-3 flex items-center gap-2">
-                                <i data-lucide="list-checks" class="h-4 w-4 text-blue-400 flex-shrink-0" aria-hidden="true"></i>
-                                Pilares del Proyecto
-                            </h3>
-                            <ul class="space-y-2.5" role="list">
-                                <li class="flex items-start gap-2.5">
-                                    <span class="flex h-5 w-5 rounded-full bg-blue-500/20 border border-blue-500/40 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3 w-3 text-blue-400" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="text-slate-400 text-xs leading-relaxed">Capacitación técnica agroindustrial</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="flex h-5 w-5 rounded-full bg-blue-500/20 border border-blue-500/40 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3 w-3 text-blue-400" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="text-slate-400 text-xs leading-relaxed">Unidad piloto de producción con equipamiento validado</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="flex h-5 w-5 rounded-full bg-blue-500/20 border border-blue-500/40 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3 w-3 text-blue-400" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="text-slate-400 text-xs leading-relaxed">Marca territorial "Sabores de Quinsaloma"</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="flex h-5 w-5 rounded-full bg-blue-500/20 border border-blue-500/40 items-center justify-center flex-shrink-0 mt-0.5">
-                                        <i data-lucide="check" class="h-3 w-3 text-blue-400" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="text-slate-400 text-xs leading-relaxed">Comercialización territorial con encadenamientos inclusivos</span>
-                                </li>
-                            </ul>
                         </div>
 
                         <!-- CTA -->
                         <a href="#contacto"
-                           class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-hover transition-colors">
+                           class="btn-primary w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 transition-colors mt-2 shadow-xl shadow-blue-900/20 border border-blue-500">
                             <i data-lucide="message-circle" class="h-4 w-4" aria-hidden="true"></i>
                             Más información del proyecto
                         </a>
@@ -950,30 +917,30 @@
                 </div><!-- /bento grid -->
 
                 <!-- Franja de indicadores ODS -->
-                <div class="reveal mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-                    <div class="bg-slate-800/50 rounded-xl border border-slate-700/40 px-3 py-3 text-center">
-                        <p class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest mb-0.5">ODS 1</p>
-                        <p class="text-white text-xs font-semibold leading-tight">Fin de la pobreza</p>
+                <div class="reveal mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                    <div class="bg-slate-800/40 rounded-2xl border border-slate-700/40 px-4 py-4 text-center hover:bg-slate-800/60 transition-colors cursor-default">
+                        <p class="text-[0.65rem] font-bold text-blue-400 uppercase tracking-widest mb-1">ODS 1</p>
+                        <p class="text-slate-300 text-xs font-semibold leading-tight">Fin de la pobreza</p>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl border border-slate-700/40 px-3 py-3 text-center">
-                        <p class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest mb-0.5">ODS 4</p>
-                        <p class="text-white text-xs font-semibold leading-tight">Educación de calidad</p>
+                    <div class="bg-slate-800/40 rounded-2xl border border-slate-700/40 px-4 py-4 text-center hover:bg-slate-800/60 transition-colors cursor-default">
+                        <p class="text-[0.65rem] font-bold text-blue-400 uppercase tracking-widest mb-1">ODS 4</p>
+                        <p class="text-slate-300 text-xs font-semibold leading-tight">Educación de calidad</p>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl border border-slate-700/40 px-3 py-3 text-center">
-                        <p class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest mb-0.5">ODS 5</p>
-                        <p class="text-white text-xs font-semibold leading-tight">Igualdad de género</p>
+                    <div class="bg-slate-800/40 rounded-2xl border border-slate-700/40 px-4 py-4 text-center hover:bg-slate-800/60 transition-colors cursor-default">
+                        <p class="text-[0.65rem] font-bold text-blue-400 uppercase tracking-widest mb-1">ODS 5</p>
+                        <p class="text-slate-300 text-xs font-semibold leading-tight">Igualdad de género</p>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl border border-slate-700/40 px-3 py-3 text-center">
-                        <p class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest mb-0.5">ODS 8</p>
-                        <p class="text-white text-xs font-semibold leading-tight">Trabajo decente</p>
+                    <div class="bg-slate-800/40 rounded-2xl border border-slate-700/40 px-4 py-4 text-center hover:bg-slate-800/60 transition-colors cursor-default">
+                        <p class="text-[0.65rem] font-bold text-blue-400 uppercase tracking-widest mb-1">ODS 8</p>
+                        <p class="text-slate-300 text-xs font-semibold leading-tight">Trabajo decente</p>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl border border-slate-700/40 px-3 py-3 text-center">
-                        <p class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest mb-0.5">ODS 9</p>
-                        <p class="text-white text-xs font-semibold leading-tight">Industria e innovación</p>
+                    <div class="bg-slate-800/40 rounded-2xl border border-slate-700/40 px-4 py-4 text-center hover:bg-slate-800/60 transition-colors cursor-default">
+                        <p class="text-[0.65rem] font-bold text-blue-400 uppercase tracking-widest mb-1">ODS 9</p>
+                        <p class="text-slate-300 text-xs font-semibold leading-tight">Industria e innovación</p>
                     </div>
-                    <div class="bg-slate-800/50 rounded-xl border border-slate-700/40 px-3 py-3 text-center">
-                        <p class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest mb-0.5">ODS 12</p>
-                        <p class="text-white text-xs font-semibold leading-tight">Consumo responsable</p>
+                    <div class="bg-slate-800/40 rounded-2xl border border-slate-700/40 px-4 py-4 text-center hover:bg-slate-800/60 transition-colors cursor-default">
+                        <p class="text-[0.65rem] font-bold text-blue-400 uppercase tracking-widest mb-1">ODS 12</p>
+                        <p class="text-slate-300 text-xs font-semibold leading-tight">Consumo responsable</p>
                     </div>
                 </div>
 
@@ -986,64 +953,64 @@
         <section id="equipo" aria-labelledby="equipo-heading" class="py-20 sm:py-28 bg-slate-50 border-t border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="text-center mb-14 reveal">
+                <div class="text-center mb-16 reveal">
                     <span class="section-label">Quiénes somos</span>
-                    <h2 id="equipo-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    <h2 id="equipo-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
                         Equipo Directivo
                     </h2>
-                    <p class="text-slate-500 max-w-md mx-auto text-base">
+                    <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                         Profesionales comprometidos con el desarrollo educativo y social del Ecuador.
                     </p>
                 </div>
 
                 <!-- Grid tipo bento: 3 + 2 centrados -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
                     <!-- Miembro 1 -->
-                    <article class="reveal reveal-delay-1 card-lift bg-white rounded-2xl border border-slate-200 shadow-card p-6 flex gap-4 items-center group">
-                        <img src="marco.png" alt="Fotografía de Marco Antonio Herrera Garzón" class="h-24 w-24 rounded-full object-cover shadow-lg ring-4 ring-brand-light group-hover:ring-blue-200 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-                        <div class="min-w-0">
-                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-dark transition-colors">Marco Antonio Herrera Garzón</h3>
-                            <p class="text-brand-dark font-semibold text-xs mt-0.5 mb-2">CEO de la Fundación</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Investigador y profesor en áreas tecnológicas avanzadas e ingeniería aplicada.</p>
+                    <article class="reveal reveal-delay-1 card-lift bg-white rounded-3xl border border-slate-200 shadow-card p-8 flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left group">
+                        <img src="marco.png" alt="Fotografía de Marco Antonio Herrera Garzón" class="h-28 w-28 rounded-full object-cover shadow-lg ring-4 ring-slate-50 group-hover:ring-blue-100 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                        <div class="min-w-0 flex-1 pt-1 sm:pt-0">
+                            <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-dark transition-colors mb-1">Marco Antonio Herrera Garzón</h3>
+                            <p class="text-brand-dark font-bold text-xs uppercase tracking-wider mb-3">CEO de la Fundación</p>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Investigador y profesor en áreas tecnológicas avanzadas e ingeniería aplicada.</p>
                         </div>
                     </article>
 
                     <!-- Miembro 2 -->
-                    <article class="reveal reveal-delay-2 card-lift bg-white rounded-2xl border border-slate-200 shadow-card p-6 flex gap-4 items-center group">
-                        <img src="jose.png" alt="Fotografía de José Bladimir Pastrano L." class="h-24 w-24 rounded-full object-cover shadow-lg ring-4 ring-brand-light group-hover:ring-blue-200 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-                        <div class="min-w-0">
-                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-dark transition-colors">José Bladimir Pastrano L.</h3>
-                            <p class="text-brand-dark font-semibold text-xs mt-0.5 mb-2">Presidente y Representante Legal</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Docente-Investigador (UCE), experto en diseño curricular y gestión de la investigación.</p>
+                    <article class="reveal reveal-delay-2 card-lift bg-white rounded-3xl border border-slate-200 shadow-card p-8 flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left group">
+                        <img src="jose.png" alt="Fotografía de José Bladimir Pastrano L." class="h-28 w-28 rounded-full object-cover shadow-lg ring-4 ring-slate-50 group-hover:ring-blue-100 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                        <div class="min-w-0 flex-1 pt-1 sm:pt-0">
+                            <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-dark transition-colors mb-1">José Bladimir Pastrano L.</h3>
+                            <p class="text-brand-dark font-bold text-xs uppercase tracking-wider mb-3">Presidente y Representante Legal</p>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Docente-Investigador (UCE), experto en diseño curricular y gestión de la investigación.</p>
                         </div>
                     </article>
 
                     <!-- Miembro 3 -->
-                    <article class="reveal reveal-delay-3 card-lift bg-white rounded-2xl border border-slate-200 shadow-card p-6 flex gap-4 items-center group">
-                        <img src="patricio.png" alt="Fotografía de Jorge Patricio Cáceres Pérez" class="h-24 w-24 rounded-full object-cover shadow-lg ring-4 ring-brand-light group-hover:ring-blue-200 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-                        <div class="min-w-0">
-                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-dark transition-colors">Jorge Patricio Cáceres Pérez</h3>
-                            <p class="text-brand-dark font-semibold text-xs mt-0.5 mb-2">Gestión Administrativa y Financiera</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Ingeniero de Empresas con experiencia liderando talento humano en sector público y privado.</p>
+                    <article class="reveal reveal-delay-3 card-lift bg-white rounded-3xl border border-slate-200 shadow-card p-8 flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left group">
+                        <img src="patricio.png" alt="Fotografía de Jorge Patricio Cáceres Pérez" class="h-28 w-28 rounded-full object-cover shadow-lg ring-4 ring-slate-50 group-hover:ring-blue-100 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                        <div class="min-w-0 flex-1 pt-1 sm:pt-0">
+                            <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-dark transition-colors mb-1">Jorge Patricio Cáceres Pérez</h3>
+                            <p class="text-brand-dark font-bold text-xs uppercase tracking-wider mb-3">Gestión Administrativa y Financiera</p>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Ingeniero de Empresas con experiencia liderando talento humano en sector público y privado.</p>
                         </div>
                     </article>
 
                     <!-- Miembro 4 — centrado en lg -->
-                    <article class="reveal reveal-delay-4 card-lift bg-white rounded-2xl border border-slate-200 shadow-card p-6 flex gap-4 items-center group sm:col-span-1 lg:col-start-1">
-                        <img src="peter.png" alt="Fotografía de Peter Alexander Amaguaya P." class="h-24 w-24 rounded-full object-cover shadow-lg ring-4 ring-brand-light group-hover:ring-blue-200 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-                        <div class="min-w-0">
-                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-dark transition-colors">Peter Alexander Amaguaya P.</h3>
-                            <p class="text-brand-dark font-semibold text-xs mt-0.5 mb-2">Coordinador Institucional</p>
+                    <article class="reveal reveal-delay-4 card-lift bg-white rounded-3xl border border-slate-200 shadow-card p-8 flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left group sm:col-span-1 lg:col-start-1">
+                        <img src="peter.png" alt="Fotografía de Peter Alexander Amaguaya P." class="h-28 w-28 rounded-full object-cover shadow-lg ring-4 ring-slate-50 group-hover:ring-blue-100 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                        <div class="min-w-0 flex-1 pt-1 sm:pt-0">
+                            <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-dark transition-colors mb-1">Peter Alexander Amaguaya P.</h3>
+                            <p class="text-brand-dark font-bold text-xs uppercase tracking-wider mb-3">Coordinador Institucional</p>
                         </div>
                     </article>
 
                     <!-- Miembro 5 -->
-                    <article class="reveal reveal-delay-5 card-lift bg-white rounded-2xl border border-slate-200 shadow-card p-6 flex gap-4 items-center group">
-                        <img src="anahy.png" alt="Fotografía de Gabriela Anahí Amaguaya P." class="h-24 w-24 rounded-full object-cover shadow-lg ring-4 ring-brand-light group-hover:ring-blue-200 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-                        <div class="min-w-0">
-                            <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-dark transition-colors">Gabriela Anahí Amaguaya P.</h3>
-                            <p class="text-brand-dark font-semibold text-xs mt-0.5 mb-2">Difusión y Comunicación</p>
+                    <article class="reveal reveal-delay-5 card-lift bg-white rounded-3xl border border-slate-200 shadow-card p-8 flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left group">
+                        <img src="anahy.png" alt="Fotografía de Gabriela Anahí Amaguaya P." class="h-28 w-28 rounded-full object-cover shadow-lg ring-4 ring-slate-50 group-hover:ring-blue-100 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                        <div class="min-w-0 flex-1 pt-1 sm:pt-0">
+                            <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-dark transition-colors mb-1">Gabriela Anahí Amaguaya P.</h3>
+                            <p class="text-brand-dark font-bold text-xs uppercase tracking-wider mb-3">Difusión y Comunicación</p>
                         </div>
                     </article>
 
@@ -1056,111 +1023,111 @@
     <!-- ═══════════════════════════════════════
          FOOTER + CONTACTO
     ═══════════════════════════════════════ -->
-    <footer id="contacto" class="bg-slate-900 text-white pt-20 sm:pt-24 pb-10 border-t-4 border-brand-dark" role="contentinfo">
+    <footer id="contacto" class="bg-slate-900 text-white pt-20 sm:pt-28 pb-12 border-t-[6px] border-brand-dark" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-14 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 mb-16 items-start">
 
                 <!-- Info de contacto -->
                 <div class="reveal">
-                    <span class="section-label" style="color:#93c5fd;">Contacto</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight">Conversemos</h2>
-                    <p class="text-slate-400 mb-9 max-w-sm text-base leading-relaxed">
-                        Reserva una entrevista o contáctanos para ser parte de nuestros proyectos educativos.
+                    <span class="inline-block text-[0.7rem] font-bold tracking-[0.12em] uppercase text-blue-400 mb-4 bg-blue-900/30 px-4 py-1.5 rounded-full border border-blue-800/50">Contacto</span>
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight text-white">Conversemos</h2>
+                    <p class="text-slate-400 mb-10 max-w-md text-base sm:text-lg leading-relaxed font-medium">
+                        Reserva una entrevista o contáctanos directamente para ser parte de nuestros proyectos educativos.
                     </p>
 
-                    <address class="not-italic space-y-3.5">
+                    <address class="not-italic space-y-4">
                         <a href="mailto:info@fundacionsuperandoretostransformandovidas.org"
-                           class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group" aria-label="Enviar correo a info@fundacionsuperandoretostransformandovidas.org">
-                            <div class="p-2.5 bg-slate-800 rounded-xl group-hover:bg-slate-700 transition-colors flex-shrink-0">
-                                <i data-lucide="mail" class="h-5 w-5" aria-hidden="true"></i>
+                           class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="Enviar correo a info@fundacionsuperandoretostransformandovidas.org">
+                            <div class="flex h-12 w-12 bg-slate-800 rounded-2xl group-hover:bg-brand-dark transition-colors items-center justify-center flex-shrink-0 border border-slate-700 group-hover:border-blue-500 shadow-sm">
+                                <i data-lucide="mail" class="h-5 w-5 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
                             </div>
-                            <span class="text-sm break-all">info@fundacionsuperandoretostransformandovidas.org</span>
+                            <span class="text-sm font-medium break-all mt-1">info@fundacionsuperandoretostransformandovidas.org</span>
                         </a>
                         <a href="https://wa.me/593997841341" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group" aria-label="WhatsApp 099 784 1341">
-                            <div class="p-2.5 bg-slate-800 rounded-xl group-hover:bg-slate-700 transition-colors flex-shrink-0">
-                                <i data-lucide="smartphone" class="h-5 w-5" aria-hidden="true"></i>
+                           class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="WhatsApp 099 784 1341">
+                            <div class="flex h-12 w-12 bg-slate-800 rounded-2xl group-hover:bg-brand-dark transition-colors items-center justify-center flex-shrink-0 border border-slate-700 group-hover:border-blue-500 shadow-sm">
+                                <i data-lucide="smartphone" class="h-5 w-5 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
                             </div>
-                            <span class="text-sm">099 784 1341 (WhatsApp)</span>
+                            <span class="text-sm font-medium mt-1">099 784 1341 (WhatsApp)</span>
                         </a>
                         <a href="tel:023082399"
-                           class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group" aria-label="Teléfono convencional 02 3082 399">
-                            <div class="p-2.5 bg-slate-800 rounded-xl group-hover:bg-slate-700 transition-colors flex-shrink-0">
-                                <i data-lucide="phone" class="h-5 w-5" aria-hidden="true"></i>
+                           class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="Teléfono convencional 02 3082 399">
+                            <div class="flex h-12 w-12 bg-slate-800 rounded-2xl group-hover:bg-brand-dark transition-colors items-center justify-center flex-shrink-0 border border-slate-700 group-hover:border-blue-500 shadow-sm">
+                                <i data-lucide="phone" class="h-5 w-5 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
                             </div>
-                            <span class="text-sm">02 3082 399</span>
+                            <span class="text-sm font-medium mt-1">02 3082 399</span>
                         </a>
-                        <a href="https://www.fundacionsrtv.com" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group" aria-label="Sitio web fundacionsrtv.com">
-                            <div class="p-2.5 bg-slate-800 rounded-xl group-hover:bg-slate-700 transition-colors flex-shrink-0">
-                                <i data-lucide="globe" class="h-5 w-5" aria-hidden="true"></i>
+                        <a href="https://www.fundacionsuperandoretostransformandovidas.org" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="Sitio web fundacionsuperandoretostransformandovidas.org">
+                            <div class="flex h-12 w-12 bg-slate-800 rounded-2xl group-hover:bg-brand-dark transition-colors items-center justify-center flex-shrink-0 border border-slate-700 group-hover:border-blue-500 shadow-sm">
+                                <i data-lucide="globe" class="h-5 w-5 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
                             </div>
-                            <span class="text-sm">www.fundacionsrtv.com</span>
+                            <span class="text-sm font-medium mt-1">www.fundacionsuperandoretostransformandovidas.org</span>
                         </a>
                     </address>
                 </div>
 
                 <!-- Formulario -->
                 <div class="reveal reveal-delay-2">
-                    <div class="bg-slate-800/70 backdrop-blur-sm rounded-2xl p-7 sm:p-8 border border-slate-700/60 shadow-2xl">
-                        <h3 class="text-lg font-bold mb-6 flex items-center gap-2.5">
-                            <span class="flex h-8 w-8 rounded-lg bg-brand-dark/40 items-center justify-center flex-shrink-0">
-                                <i data-lucide="calendar-check" class="h-4 w-4 text-blue-400" aria-hidden="true"></i>
+                    <div class="bg-slate-800/80 backdrop-blur-md rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-2xl">
+                        <h3 class="text-xl font-bold mb-8 flex items-center gap-3 text-white">
+                            <span class="flex h-10 w-10 rounded-xl bg-blue-500/20 items-center justify-center flex-shrink-0 border border-blue-500/30">
+                                <i data-lucide="calendar-check" class="h-5 w-5 text-blue-400" aria-hidden="true"></i>
                             </span>
                             Reservar una Entrevista
                         </h3>
 
-                        <!-- FormSubmit – Actualizado con nuevo correo -->
-                        <form action="https://formsubmit.co/info@fundacionsuperandoretostransformandovidas.org" method="POST" class="space-y-4" novalidate>
+                        <!-- FormSubmit – Actualizado con nuevo correo y redirección corregida -->
+                        <form action="https://formsubmit.co/info@fundacionsuperandoretostransformandovidas.org" method="POST" class="space-y-5" novalidate>
 
                             <input type="hidden" name="_subject" value="Nueva reserva de entrevista desde la web">
-                            <input type="hidden" name="_next" value="https://fundacionsuperandoretos.org">
+                            <input type="hidden" name="_next" value="https://fundacionsuperandoretostransformandovidas.org">
                             <input type="hidden" name="_template" value="table">
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div>
-                                    <label for="f-nombres" class="block text-xs text-slate-400 mb-1.5 font-medium">Nombres <span class="text-blue-500">*</span></label>
-                                    <input id="f-nombres" type="text" name="Nombres" required autocomplete="given-name" class="form-input" placeholder="Tu nombre">
+                                    <label for="f-nombres" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Nombres <span class="text-blue-500">*</span></label>
+                                    <input id="f-nombres" type="text" name="Nombres" required autocomplete="given-name" class="form-input shadow-inner" placeholder="Tu nombre">
                                 </div>
                                 <div>
-                                    <label for="f-apellidos" class="block text-xs text-slate-400 mb-1.5 font-medium">Apellidos <span class="text-blue-500">*</span></label>
-                                    <input id="f-apellidos" type="text" name="Apellidos" required autocomplete="family-name" class="form-input" placeholder="Tus apellidos">
+                                    <label for="f-apellidos" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Apellidos <span class="text-blue-500">*</span></label>
+                                    <input id="f-apellidos" type="text" name="Apellidos" required autocomplete="family-name" class="form-input shadow-inner" placeholder="Tus apellidos">
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-3 gap-4">
-                                <div class="col-span-1">
-                                    <label for="f-edad" class="block text-xs text-slate-400 mb-1.5 font-medium">Edad</label>
-                                    <input id="f-edad" type="number" name="Edad" min="12" max="99" class="form-input" placeholder="—">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                                <div class="sm:col-span-1">
+                                    <label for="f-edad" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Edad</label>
+                                    <input id="f-edad" type="number" name="Edad" min="12" max="99" class="form-input shadow-inner" placeholder="—">
                                 </div>
-                                <div class="col-span-2">
-                                    <label for="f-fecha" class="block text-xs text-slate-400 mb-1.5 font-medium">Fecha de Entrevista <span class="text-blue-500">*</span></label>
-                                    <input id="f-fecha" type="date" name="Fecha" required class="form-input [color-scheme:dark]">
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="f-tel" class="block text-xs text-slate-400 mb-1.5 font-medium">Teléfono / WhatsApp <span class="text-blue-500">*</span></label>
-                                    <input id="f-tel" type="tel" name="Telefono" required autocomplete="tel" class="form-input" placeholder="09X XXX XXXX">
-                                </div>
-                                <div>
-                                    <label for="f-email" class="block text-xs text-slate-400 mb-1.5 font-medium">Correo Electrónico <span class="text-blue-500">*</span></label>
-                                    <input id="f-email" type="email" name="Email" required autocomplete="email" class="form-input" placeholder="correo@ejemplo.com">
+                                <div class="sm:col-span-2">
+                                    <label for="f-fecha" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Fecha <span class="text-blue-500">*</span></label>
+                                    <input id="f-fecha" type="date" name="Fecha" required class="form-input shadow-inner [color-scheme:dark]">
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div>
-                                    <label for="f-personas" class="block text-xs text-slate-400 mb-1.5 font-medium">Nº de personas que asistirán</label>
-                                    <select id="f-personas" name="Personas_Asistentes" class="form-input">
+                                    <label for="f-tel" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Teléfono / WhatsApp <span class="text-blue-500">*</span></label>
+                                    <input id="f-tel" type="tel" name="Telefono" required autocomplete="tel" class="form-input shadow-inner" placeholder="09X XXX XXXX">
+                                </div>
+                                <div>
+                                    <label for="f-email" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Correo <span class="text-blue-500">*</span></label>
+                                    <input id="f-email" type="email" name="Email" required autocomplete="email" class="form-input shadow-inner" placeholder="correo@ejemplo.com">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="f-personas" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Asistentes</label>
+                                    <select id="f-personas" name="Personas_Asistentes" class="form-input shadow-inner">
                                         <option>1</option><option>2</option><option>3</option><option>4</option><option>Más de 5</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="f-horario" class="block text-xs text-slate-400 mb-1.5 font-medium">Horario que elige</label>
-                                    <select id="f-horario" name="Horario_Elegido" class="form-input">
+                                    <label for="f-horario" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Horario</label>
+                                    <select id="f-horario" name="Horario_Elegido" class="form-input shadow-inner">
                                         <option>De lunes a viernes</option>
                                         <option>Intensivo de sábado y domingo</option>
                                         <option>Por definir</option>
@@ -1169,12 +1136,12 @@
                             </div>
 
                             <div>
-                                <label for="f-notas" class="block text-xs text-slate-400 mb-1.5 font-medium">Notas adicionales</label>
-                                <textarea id="f-notas" name="Notas" rows="2" class="form-input resize-none" placeholder="Consultas, programa de interés, etc."></textarea>
+                                <label for="f-notas" class="block text-xs text-slate-400 mb-2 font-bold uppercase tracking-wider">Notas adicionales</label>
+                                <textarea id="f-notas" name="Notas" rows="3" class="form-input resize-none shadow-inner" placeholder="Consultas, programa de interés, etc."></textarea>
                             </div>
 
                             <button type="submit"
-                                    class="btn-primary w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg mt-1 text-sm">
+                                    class="btn-primary w-full flex items-center justify-center gap-2 px-8 py-4 bg-white text-brand-dark font-extrabold rounded-xl hover:bg-slate-50 transition-colors shadow-xl shadow-black/20 mt-2 text-sm uppercase tracking-wider">
                                 <i data-lucide="calendar-check" class="h-4 w-4" aria-hidden="true"></i>
                                 Agendar Entrevista
                             </button>
@@ -1184,13 +1151,13 @@
             </div><!-- /grid -->
 
             <!-- Footer bottom bar -->
-            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
+            <div class="pt-10 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6 text-slate-500 text-sm font-medium">
                 <p>&copy; 2026 Fundación Educativa Superando Retos Transformando Vidas. Todos los derechos reservados.</p>
-                <div class="flex gap-3" role="list" aria-label="Redes sociales">
-                    <a href="#" class="p-2 rounded-lg hover:bg-slate-800 hover:text-white transition-colors" role="listitem" aria-label="Facebook">
+                <div class="flex gap-4" role="list" aria-label="Redes sociales">
+                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Facebook">
                         <i data-lucide="facebook" class="h-4 w-4" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="p-2 rounded-lg hover:bg-slate-800 hover:text-white transition-colors" role="listitem" aria-label="Instagram">
+                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Instagram">
                         <i data-lucide="instagram" class="h-4 w-4" aria-hidden="true"></i>
                     </a>
                 </div>
