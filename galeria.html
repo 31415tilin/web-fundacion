@@ -20,10 +20,10 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         brand: {
-                            dark: '#1e3a8a',     /* Deep Corporate Blue */
-                            hover: '#1e40af',    /* Slightly lighter blue for hover */
-                            light: '#f8fafc',    /* Very subtle slate/blue off-white */
-                            muted: '#e2e8f0'     /* Muted slate border */
+                            dark: '#1e3a8a',     
+                            hover: '#1e40af',    
+                            light: '#f8fafc',    
+                            muted: '#e2e8f0'     
                         }
                     },
                     boxShadow: {
@@ -67,7 +67,6 @@
             .reveal { transition: none !important; opacity: 1; transform: none; }
         }
 
-        /* === Mobile nav menu === */
         #mobile-menu { display: none; }
         #mobile-menu.open { display: block; }
     </style>
@@ -82,7 +81,6 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-18 py-3">
 
-                    <!-- Logo (Apunta al inicio) -->
                     <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group" aria-label="Regresar al Inicio">
                         <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg"
                              alt="Logo Fundación Superando Retos Transformando Vidas"
@@ -92,7 +90,6 @@
                         </span>
                     </a>
 
-                    <!-- Desktop nav links -->
                     <div class="hidden lg:flex items-center space-x-1" role="list">
                         <a href="index.html#nosotros"       role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Quiénes Somos</a>
                         <a href="index.html#programas"      role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Programas</a>
@@ -103,7 +100,6 @@
                         <a href="index.html#equipo"         role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Equipo</a>
                     </div>
 
-                    <!-- CTA + mobile toggle -->
                     <div class="flex items-center gap-3">
                         <a href="index.html#contacto" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-brand-hover transition-colors shadow-btn hover:shadow-btn-hover">
                             Contacto
@@ -117,7 +113,6 @@
                 </div>
             </div>
 
-            <!-- Mobile menu -->
             <div id="mobile-menu" role="navigation" aria-label="Menú móvil"
                  class="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-xl absolute w-full">
                 <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
@@ -133,7 +128,7 @@
         </nav>
     </header>
 
-    <main class="pt-28 sm:pt-36 pb-20 sm:pb-32 bg-white min-h-screen">
+    <main class="pt-28 sm:pt-36 pb-20 sm:pb-32 bg-slate-50 min-h-screen">
         <!-- ═══════════════════════════════════════
              SECCIÓN: GALERÍA DE ACTIVIDADES
         ═══════════════════════════════════════ -->
@@ -143,71 +138,179 @@
                 <div class="text-center mb-12 sm:mb-16 reveal">
                     <span class="section-label">Trabajo de campo</span>
                     <h1 id="galeria-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
-                        Galería de Actividades
+                        Imágenes de las diferentes actividades que realiza la fundación
                     </h1>
                     <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-medium">
-                        Un vistazo a nuestros proyectos, capacitaciones y vinculación directa con la comunidad en las zonas de impacto.
+                        A continuación, presentamos nuestra vinculación comunitaria, desarrollo de emprendimientos y visitas territoriales.
                     </p>
                 </div>
 
-                <!-- Grid 4 columnas, imágenes cuadradas con zoom al hover -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 reveal reveal-delay-1">
+                <!-- Grid de Tarjetas Documentales -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 reveal reveal-delay-1">
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo1.jpg" alt="Actividad de campo de la fundación 1"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 1 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo1.jpg" alt="Finca de naranjas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Productive orange farm where the fruit is not brought to market due to low prices.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo2.jpg" alt="Actividad de campo de la fundación 2"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 2 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo2.jpg" alt="Proceso cacao" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Resultado del proceso de elaboración de derivados del cacao emprendimiento familiar y/o social.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo3.jpg" alt="Actividad de campo de la fundación 3"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 3 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo3.jpg" alt="Las Naves" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Promoviendo los emprendimientos en unidades educativas rurales cantón Las Naves provincia de Bolívar.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo4.jpg" alt="Actividad de campo de la fundación 4"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 4 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo4.jpg" alt="San Luis de Pambil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Visita al rector de la Unidad Educativa Fiscal Gonzalo Pizarro de la Parroquia San Luís de Pambil, cantón Las Naves.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo5.jpg" alt="Actividad de campo de la fundación 5"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 5 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo5.jpg" alt="Quinsaloma" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Rector de la Unidad Educativa fiscal 16 de mayo del cantón Quinsaloma, provincia de Los Ríos.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo6.jpg" alt="Actividad de campo de la fundación 6"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 6 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo6.jpg" alt="Pangua Capitan Galo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Visita pa orientación Vocacional y profesional a la Unidad Educativa Capitán Galo Miño, en la parroquia las Juntas, cantón Pangua.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo7.jpg" alt="Actividad de campo de la fundación 7"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 7 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo7.jpg" alt="Moraspungo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Visita a la Unidad Educativa Moraspungo, parroquia Moraspungo, cantón Pangua, provincia de Cotopaxi.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
-                        <img src="Actividad_de_campo8.jpg" alt="Actividad de campo de la fundación 8"
-                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
+                    <!-- Tarjeta 8 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo8.jpg" alt="Conocimientos empíricos" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Los conocimientos empíricos como fuente de ingreso de algunos habitantes del sector de las zonas rurales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 9 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo9.jpg" alt="Capacitación Pangua" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Capacitación sobre liderazgo, trabajo en equipo y manejo de habilidades blandas del personal docente de la Unidad Educativa Pangua.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 10 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo10.jpg" alt="Bebé en clase" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Imágenes que hablan solas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 11 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo11.jpg" alt="Reunión Quinsaloma" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Reunión con propietarios de fincas agrícolas productivas del cantón Quinsaloma de la provincia de Los Ríos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 12 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo12.jpg" alt="Finca Cacaotera" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Visita a la finca cacaotera donde se elabora insumos naturales para la producción de cacao.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 13 -->
+                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group sm:col-span-2 lg:col-span-1">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <img src="Actividad_de_campo13.jpg" alt="Marquesina de secado" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
+                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
+                                Marquesina para el secado higiénico del cacao.
+                            </p>
+                        </div>
                     </div>
 
                 </div>
 
                 <div class="mt-16 text-center reveal reveal-delay-2">
                     <p class="text-slate-500 text-base font-medium mb-6">Conoce más sobre el impacto de la Fundación SRTV.</p>
-                    <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-100 text-slate-800 font-bold text-sm hover:bg-slate-200 transition-colors">
+                    <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-200 text-slate-800 font-bold text-sm hover:bg-slate-300 transition-colors shadow-sm">
                         <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i>
-                        Volver al inicio
+                        Volver a la página principal
                     </a>
                 </div>
 
@@ -244,10 +347,8 @@
     </footer>
 
     <script>
-        // ── Lucide icons init ──
         lucide.createIcons();
 
-        // ── Nav scroll effect ──
         const nav = document.getElementById('main-nav');
         const onScroll = () => {
             nav.classList.toggle('nav-scrolled', window.scrollY > 20);
@@ -255,7 +356,6 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
-        // ── Mobile menu toggle ──
         const toggle = document.getElementById('mobile-toggle');
         const menu = document.getElementById('mobile-menu');
         const iconOpen = document.getElementById('mobile-icon-open');
@@ -267,7 +367,6 @@
             iconClose.classList.toggle('hidden', !open);
         });
 
-        // Close mobile menu on nav link click
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('open');
@@ -277,7 +376,6 @@
             });
         });
 
-        // ── Scroll-reveal (Intersection Observer) ──
         const revealEls = document.querySelectorAll('.reveal');
         const revealObs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
