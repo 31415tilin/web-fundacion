@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería | Fundación Educativa Superando Retos Transformando Vidas</title>
-    <!-- Se mantienen las mismas configuraciones y estilos de tu index.html -->
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <script src="[https://unpkg.com/lucide@latest](https://unpkg.com/lucide@latest)"></script>
-    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap)" rel="stylesheet">
+    <title>Galería de Actividades | Fundación Educativa Superando Retos Transformando Vidas</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Galería de imágenes de los proyectos y actividades en campo de la Fundación Educativa Superando Retos Transformando Vidas en Ecuador.">
+    <meta name="theme-color" content="#1e3a8a">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -15,18 +20,24 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         brand: {
-                            dark: '#1e3a8a',
-                            hover: '#1e40af',
-                            light: '#f8fafc',
-                            muted: '#e2e8f0'
+                            dark: '#1e3a8a',     /* Deep Corporate Blue */
+                            hover: '#1e40af',    /* Slightly lighter blue for hover */
+                            light: '#f8fafc',    /* Very subtle slate/blue off-white */
+                            muted: '#e2e8f0'     /* Muted slate border */
                         }
+                    },
+                    boxShadow: {
+                        'card': '0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04)',
+                        'card-hover': '0 2px 4px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.08)',
+                        'btn': '0 1px 2px rgba(30,58,138,0.08), 0 4px 12px rgba(30,58,138,0.20)',
+                        'btn-hover': '0 2px 4px rgba(30,58,138,0.10), 0 8px 24px rgba(30,58,138,0.28)',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Estilos esenciales extraídos de tu index.html */
+        /* === Scroll-reveal animation === */
         .reveal {
             opacity: 0;
             transform: translateY(28px);
@@ -38,51 +49,67 @@
             transform: translateY(0);
         }
         .reveal-delay-1 { transition-delay: 0.08s; }
+        
         .section-label {
             display: inline-block;
             font-size: 0.7rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #1e3a8a;
             margin-bottom: 0.75rem;
         }
-        .nav-scrolled { box-shadow: 0 1px 0 #e2e8f0, 0 4px 20px rgba(0,0,0,0.06); }
+
+        /* === Nav scroll effect === */
+        .nav-scrolled { box-shadow: 0 1px 0 #e2e8f0, 0 8px 24px rgba(0,0,0,0.04); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: none !important; opacity: 1; transform: none; }
+        }
+
+        /* === Mobile nav menu === */
         #mobile-menu { display: none; }
         #mobile-menu.open { display: block; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-brand-dark">
 
-    <!-- NAVEGACIÓN FIJA -->
+    <!-- ═══════════════════════════════════════
+         NAVEGACIÓN FIJA
+    ═══════════════════════════════════════ -->
     <header role="banner">
         <nav id="main-nav" aria-label="Navegación principal" class="fixed top-0 z-50 w-full backdrop-blur-md bg-white/92 border-b border-slate-200/80 transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-18 py-3">
-                    <!-- Logo apuntando al index -->
-                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group" aria-label="Inicio – Fundación SRTV">
-                        <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg" alt="Logo Fundación" class="h-12 w-auto rounded-xl shadow-sm">
+
+                    <!-- Logo (Apunta al inicio) -->
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group" aria-label="Regresar al Inicio">
+                        <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg"
+                             alt="Logo Fundación Superando Retos Transformando Vidas"
+                             class="h-12 w-auto object-contain rounded-xl shadow-sm group-hover:shadow-md transition-all duration-300">
                         <span class="font-bold text-sm text-brand-dark hidden sm:block max-w-[180px] leading-snug">
                             Superando Retos<br>Transformando Vidas
                         </span>
                     </a>
 
-                    <!-- Enlaces de escritorio -->
+                    <!-- Desktop nav links -->
                     <div class="hidden lg:flex items-center space-x-1" role="list">
-                        <a href="index.html#nosotros" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Quiénes Somos</a>
-                        <a href="index.html#programas" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Programas</a>
-                        <a href="index.html#anuncios" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Novedades</a>
-                        <a href="index.html#transparencia" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Documentos</a>
-                        <a href="galeria.html" class="px-3 py-2 text-brand-dark bg-brand-light rounded-lg font-medium text-sm transition-all">Galería</a>
-                        <a href="index.html#equipo" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Equipo</a>
+                        <a href="index.html#nosotros"       role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Quiénes Somos</a>
+                        <a href="index.html#programas"      role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Programas</a>
+                        <a href="index.html#anuncios"       role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Novedades</a>
+                        <a href="index.html#transparencia"  role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Documentos</a>
+                        <a href="index.html#proyecto-quinsaloma" role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Proyecto</a>
+                        <a href="#"                         role="listitem" class="px-3 py-2 text-brand-dark bg-blue-50 rounded-lg font-bold text-sm transition-all duration-200">Galería</a>
+                        <a href="index.html#equipo"         role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Equipo</a>
                     </div>
 
-                    <!-- Botón Contacto y Menú Móvil -->
+                    <!-- CTA + mobile toggle -->
                     <div class="flex items-center gap-3">
-                        <a href="index.html#contacto" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-blue-800 transition-colors">
+                        <a href="index.html#contacto" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-brand-hover transition-colors shadow-btn hover:shadow-btn-hover">
                             Contacto
                         </a>
-                        <button id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+                        <button id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"
+                                class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
                             <i data-lucide="menu" class="h-5 w-5" id="mobile-icon-open"></i>
                             <i data-lucide="x" class="h-5 w-5 hidden" id="mobile-icon-close"></i>
                         </button>
@@ -90,107 +117,145 @@
                 </div>
             </div>
 
-            <!-- Menú móvil -->
-            <div id="mobile-menu" class="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md">
+            <!-- Mobile menu -->
+            <div id="mobile-menu" role="navigation" aria-label="Menú móvil"
+                 class="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-xl absolute w-full">
                 <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
-                    <a href="index.html#nosotros" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm">Quiénes Somos</a>
-                    <a href="index.html#programas" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm">Programas</a>
-                    <a href="index.html#anuncios" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm">Novedades</a>
-                    <a href="galeria.html" class="px-4 py-3 text-brand-dark bg-brand-light rounded-lg font-medium text-sm">Galería</a>
-                    <a href="index.html#equipo" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-brand-light rounded-lg font-medium text-sm">Equipo</a>
+                    <a href="index.html#nosotros"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Quiénes Somos</a>
+                    <a href="index.html#programas"           class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Programas</a>
+                    <a href="index.html#anuncios"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Novedades</a>
+                    <a href="index.html#transparencia"       class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Documentos</a>
+                    <a href="index.html#proyecto-quinsaloma" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Proyecto</a>
+                    <a href="#"                              class="px-4 py-3 text-brand-dark bg-blue-50 rounded-lg font-bold text-sm transition-colors">Galería</a>
+                    <a href="index.html#equipo"              class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Equipo</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="pt-28">
-        <!-- SECCIÓN: GALERÍA DE ACTIVIDADES -->
-        <section id="galeria" aria-labelledby="galeria-heading" class="py-12 sm:py-20 bg-white">
+    <main class="pt-28 sm:pt-36 pb-20 sm:pb-32 bg-white min-h-screen">
+        <!-- ═══════════════════════════════════════
+             SECCIÓN: GALERÍA DE ACTIVIDADES
+        ═══════════════════════════════════════ -->
+        <section id="galeria" aria-labelledby="galeria-heading">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="text-center mb-14 reveal">
+                <div class="text-center mb-12 sm:mb-16 reveal">
                     <span class="section-label">Trabajo de campo</span>
-                    <h1 id="galeria-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                    <h1 id="galeria-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
                         Galería de Actividades
                     </h1>
-                    <p class="text-slate-500 max-w-2xl mx-auto text-base leading-relaxed">
+                    <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-medium">
                         Un vistazo a nuestros proyectos, capacitaciones y vinculación directa con la comunidad en las zonas de impacto.
                     </p>
                 </div>
 
-                <!-- Grid de imágenes actualizado con los nuevos nombres -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 reveal reveal-delay-1">
+                <!-- Grid 4 columnas, imágenes cuadradas con zoom al hover -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 reveal reveal-delay-1">
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo1.jpg" alt="Actividad de campo de la fundación 1"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo2.jpg" alt="Actividad de campo de la fundación 2"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo3.jpg" alt="Actividad de campo de la fundación 3"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo4.jpg" alt="Actividad de campo de la fundación 4"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo5.jpg" alt="Actividad de campo de la fundación 5"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo6.jpg" alt="Actividad de campo de la fundación 6"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo7.jpg" alt="Actividad de campo de la fundación 7"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
-                    <div class="group relative aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 ring-1 ring-slate-200">
                         <img src="Actividad_de_campo8.jpg" alt="Actividad de campo de la fundación 8"
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/15 transition-colors duration-300"></div>
                     </div>
 
                 </div>
 
-                <p class="text-center text-xs text-slate-400 mt-8 font-medium">
-                    Actividades de capacitación, vinculación comunitaria e impacto territorial de la Fundación SRTV.
-                </p>
+                <div class="mt-16 text-center reveal reveal-delay-2">
+                    <p class="text-slate-500 text-base font-medium mb-6">Conoce más sobre el impacto de la Fundación SRTV.</p>
+                    <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-100 text-slate-800 font-bold text-sm hover:bg-slate-200 transition-colors">
+                        <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i>
+                        Volver al inicio
+                    </a>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <!-- FOOTER SIMPLE PARA PÁGINAS INTERNAS -->
-    <footer class="bg-slate-900 text-white py-10 border-t-4 border-brand-dark" role="contentinfo">
+    <!-- ═══════════════════════════════════════
+         FOOTER SIMPLE PARA PÁGINAS INTERNAS
+    ═══════════════════════════════════════ -->
+    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t-[6px] border-brand-dark" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            <p class="text-slate-400 text-sm mb-4">¿Quieres ser parte de nuestros proyectos?</p>
-            <a href="index.html#contacto" class="px-6 py-2.5 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg text-sm mb-8">
-                Ir a Contacto
+            
+            <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg" alt="Logo Fundación SRTV" class="h-16 w-auto object-contain rounded-xl opacity-80 mb-6 grayscale">
+            
+            <p class="text-slate-400 text-base mb-6 font-medium text-center max-w-sm">¿Quieres ser parte de nuestros proyectos o solicitar una capacitación?</p>
+            <a href="index.html#contacto" class="px-8 py-3.5 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-500 transition-colors shadow-lg text-sm mb-12 flex items-center gap-2">
+                <i data-lucide="mail" class="h-4 w-4"></i>
+                Escríbenos
             </a>
             
-            <div class="w-full pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
-                <p>&copy; 2026 Fundación Educativa Superando Retos Transformando Vidas. Todos los derechos reservados.</p>
+            <div class="w-full pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6 text-slate-500 text-sm font-medium">
+                <p>&copy; 2026 Fundación Educativa Superando Retos Transformando Vidas.</p>
+                <div class="flex gap-4" role="list" aria-label="Redes sociales">
+                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Facebook">
+                        <i data-lucide="facebook" class="h-4 w-4" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Instagram">
+                        <i data-lucide="instagram" class="h-4 w-4" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // ── Lucide icons init ──
         lucide.createIcons();
+
+        // ── Nav scroll effect ──
         const nav = document.getElementById('main-nav');
-        const onScroll = () => { nav.classList.toggle('nav-scrolled', window.scrollY > 20); };
+        const onScroll = () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+        };
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
+        // ── Mobile menu toggle ──
         const toggle = document.getElementById('mobile-toggle');
         const menu = document.getElementById('mobile-menu');
         const iconOpen = document.getElementById('mobile-icon-open');
@@ -202,6 +267,17 @@
             iconClose.classList.toggle('hidden', !open);
         });
 
+        // Close mobile menu on nav link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', false);
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // ── Scroll-reveal (Intersection Observer) ──
         const revealEls = document.querySelectorAll('.reveal');
         const revealObs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -211,6 +287,7 @@
                 }
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
         revealEls.forEach(el => revealObs.observe(el));
     </script>
 </body>
