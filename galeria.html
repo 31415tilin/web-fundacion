@@ -5,70 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Actividades | Fundación Educativa Superando Retos Transformando Vidas</title>
 
-    <!-- SEO Meta Tags -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
     <meta name="description" content="Galería de imágenes de los proyectos y actividades en campo de la Fundación Educativa Superando Retos Transformando Vidas en Ecuador.">
     <meta name="theme-color" content="#1e3a8a">
 
+    <!-- Integración CSS (Tailwind) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <!-- Configuración Tailwind CSS -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: {
-                            dark: '#1e3a8a',     
-                            hover: '#1e40af',    
-                            light: '#f8fafc',    
-                            muted: '#e2e8f0'     
-                        }
-                    },
-                    boxShadow: {
-                        'card': '0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04)',
-                        'card-hover': '0 2px 4px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.08)',
-                        'btn': '0 1px 2px rgba(30,58,138,0.08), 0 4px 12px rgba(30,58,138,0.20)',
-                        'btn-hover': '0 2px 4px rgba(30,58,138,0.10), 0 8px 24px rgba(30,58,138,0.28)',
+                        brand: { dark: '#1e3a8a', hover: '#1e40af', light: '#f8fafc', muted: '#e2e8f0' }
                     }
                 }
             }
         }
     </script>
+    
+    <!-- ELEMENTOS DE CSS AVANZADO -->
     <style>
-        /* === Scroll-reveal animation === */
-        .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-                        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        .bg-dot-grid {
+            background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+            background-size: 28px 28px;
         }
-        .reveal.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-delay-1 { transition-delay: 0.08s; }
+
+        /* Animaciones de aparición suave */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
         
-        .section-label {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #1e3a8a;
-            margin-bottom: 0.75rem;
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #1e3a8a; margin-bottom: 1rem; }
+        .nav-scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.03); background-color: rgba(255,255,255,0.98); backdrop-filter: blur(10px); }
+        
+        /* Botones con brillo interior */
+        .btn-primary { position: relative; transition: all 0.3s ease; box-shadow: 0 4px 14px 0 rgba(30,58,138,0.39); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(30,58,138,0.23); background-color: #1e40af; }
+        .btn-primary:active { transform: translateY(1px); }
+
+        /* Inputs del formulario con focus brillante */
+        .form-input { width: 100%; padding: 0.875rem 1.25rem; background: rgba(15,23,42,0.4); border: 1px solid rgba(148,163,184,0.2); border-radius: 0.75rem; color: #f8fafc; font-size: 0.875rem; transition: all 0.3s ease; outline: none; }
+        .form-input:focus { border-color: #60a5fa; box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.2); background: rgba(15,23,42,0.7); }
+
+        /* === EFECTOS CSS PREMIUM PARA LA GALERÍA === */
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            aspect-ratio: 4 / 3;
+            background-color: #f8fafc;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: pointer;
+        }
+        
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #93c5fd;
+            z-index: 10;
         }
 
-        /* === Nav scroll effect === */
-        .nav-scrolled { box-shadow: 0 1px 0 #e2e8f0, 0 8px 24px rgba(0,0,0,0.04); }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { transition: none !important; opacity: 1; transform: none; }
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        /* Capa oscura que aparece al hacer hover */
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 40%, rgba(15, 23, 42, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+        
+        /* Texto que se desliza hacia arriba */
+        .gallery-text {
+            color: #ffffff;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
+        .gallery-card:hover .gallery-img { transform: scale(1.1); }
+        .gallery-card:hover .gallery-overlay { opacity: 1; }
+        .gallery-card:hover .gallery-text { transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) { 
+            .reveal, .gallery-img, .gallery-overlay, .gallery-text, .gallery-card { transition: none !important; opacity: 1; transform: none; } 
+        }
+        
         #mobile-menu { display: none; }
-        #mobile-menu.open { display: block; }
+        #mobile-menu.open { display: block; animation: slideDown 0.3s ease forwards; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-brand-dark">
@@ -77,35 +125,30 @@
          NAVEGACIÓN FIJA
     ═══════════════════════════════════════ -->
     <header role="banner">
-        <nav id="main-nav" aria-label="Navegación principal" class="fixed top-0 z-50 w-full backdrop-blur-md bg-white/92 border-b border-slate-200/80 transition-all duration-300">
+        <nav id="main-nav" aria-label="Navegación principal" class="fixed top-0 z-50 w-full backdrop-blur-md bg-white/90 border-b border-slate-200/50 transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-18 py-3">
+                <div class="flex justify-between items-center h-20">
 
+                    <!-- Logo -->
                     <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group" aria-label="Regresar al Inicio">
-                        <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg"
-                             alt="Logo Fundación Superando Retos Transformando Vidas"
-                             class="h-12 w-auto object-contain rounded-xl shadow-sm group-hover:shadow-md transition-all duration-300">
-                        <span class="font-bold text-sm text-brand-dark hidden sm:block max-w-[180px] leading-snug">
-                            Superando Retos<br>Transformando Vidas
-                        </span>
+                        <img src="logo.jpg" alt="Logo Fundación Superando Retos Transformando Vidas" class="h-12 w-12 object-contain rounded-full shadow-sm group-hover:shadow-md transition-all duration-300 border border-slate-200 group-hover:border-blue-300">
+                        <span class="font-bold text-sm text-brand-dark hidden sm:block max-w-[180px] leading-snug">Superando Retos<br>Transformando Vidas</span>
                     </a>
 
+                    <!-- Enlaces de Escritorio -->
                     <div class="hidden lg:flex items-center space-x-1" role="list">
-                        <a href="index.html#nosotros"       role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Quiénes Somos</a>
-                        <a href="index.html#programas"      role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Programas</a>
-                        <a href="index.html#anuncios"       role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Novedades</a>
-                        <a href="index.html#transparencia"  role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Documentos</a>
-                        <a href="index.html#proyecto-quinsaloma" role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Proyecto</a>
-                        <a href="#"                         role="listitem" class="px-3 py-2 text-brand-dark bg-blue-50 rounded-lg font-bold text-sm transition-all duration-200">Galería</a>
-                        <a href="index.html#equipo"         role="listitem" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all duration-200">Equipo</a>
+                        <a href="index.html#nosotros" class="px-4 py-2 text-slate-600 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-medium text-sm transition-all duration-200">Quiénes Somos</a>
+                        <a href="programas.html" class="px-4 py-2 text-slate-600 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-medium text-sm transition-all duration-200">Programas y Cursos</a>
+                        <a href="index.html#transparencia" class="px-4 py-2 text-slate-600 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-medium text-sm transition-all duration-200">Documentos</a>
+                        <a href="index.html#proyecto-quinsaloma" class="px-4 py-2 text-slate-600 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-medium text-sm transition-all duration-200">Proyecto</a>
+                        <a href="#" class="px-4 py-2 text-brand-dark bg-blue-50 rounded-xl font-bold text-sm transition-all duration-200">Galería</a>
+                        <a href="index.html#equipo" class="px-4 py-2 text-slate-600 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-medium text-sm transition-all duration-200">Equipo</a>
                     </div>
 
+                    <!-- Botón Contacto y Toggle -->
                     <div class="flex items-center gap-3">
-                        <a href="index.html#contacto" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-brand-hover transition-colors shadow-btn hover:shadow-btn-hover">
-                            Contacto
-                        </a>
-                        <button id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"
-                                class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                        <a href="index.html#contacto" class="btn-primary inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold rounded-full text-white bg-brand-dark">Contacto</a>
+                        <button id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors bg-white border border-slate-200 shadow-sm">
                             <i data-lucide="menu" class="h-5 w-5" id="mobile-icon-open"></i>
                             <i data-lucide="x" class="h-5 w-5 hidden" id="mobile-icon-close"></i>
                         </button>
@@ -113,232 +156,265 @@
                 </div>
             </div>
 
-            <div id="mobile-menu" role="navigation" aria-label="Menú móvil"
-                 class="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-xl absolute w-full">
-                <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
-                    <a href="index.html#nosotros"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Quiénes Somos</a>
-                    <a href="index.html#programas"           class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Programas</a>
-                    <a href="index.html#anuncios"            class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Novedades</a>
-                    <a href="index.html#transparencia"       class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Documentos</a>
-                    <a href="index.html#proyecto-quinsaloma" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Proyecto</a>
-                    <a href="#"                              class="px-4 py-3 text-brand-dark bg-blue-50 rounded-lg font-bold text-sm transition-colors">Galería</a>
-                    <a href="index.html#equipo"              class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Equipo</a>
+            <!-- Menú Móvil -->
+            <div id="mobile-menu" role="navigation" aria-label="Menú móvil" class="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-xl shadow-2xl absolute w-full">
+                <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+                    <a href="index.html#nosotros" class="px-5 py-3.5 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-semibold text-sm transition-colors border border-transparent hover:border-blue-100">Quiénes Somos</a>
+                    <a href="programas.html" class="px-5 py-3.5 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-semibold text-sm transition-colors border border-transparent hover:border-blue-100">Programas y Cursos</a>
+                    <a href="index.html#transparencia" class="px-5 py-3.5 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-semibold text-sm transition-colors border border-transparent hover:border-blue-100">Documentos Oficiales</a>
+                    <a href="index.html#proyecto-quinsaloma" class="px-5 py-3.5 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-semibold text-sm transition-colors border border-transparent hover:border-blue-100">Proyecto Quinsaloma</a>
+                    <a href="#" class="px-5 py-3.5 text-brand-dark bg-blue-50 rounded-xl font-bold text-sm transition-colors border border-blue-100">Galería Fotográfica</a>
+                    <a href="index.html#equipo" class="px-5 py-3.5 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-xl font-semibold text-sm transition-colors border border-transparent hover:border-blue-100">Equipo Directivo</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="pt-28 sm:pt-36 pb-20 sm:pb-32 bg-slate-50 min-h-screen">
+    <main class="pt-32 sm:pt-40 pb-20 sm:pb-32 bg-white relative min-h-screen">
+        <div class="absolute inset-0 bg-dot-grid opacity-50" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-white/80 to-white pointer-events-none" aria-hidden="true"></div>
+
         <!-- ═══════════════════════════════════════
              SECCIÓN: GALERÍA DE ACTIVIDADES
         ═══════════════════════════════════════ -->
-        <section id="galeria" aria-labelledby="galeria-heading">
+        <section id="galeria" aria-labelledby="galeria-heading" class="relative z-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="text-center mb-12 sm:mb-16 reveal">
-                    <span class="section-label">Trabajo de campo</span>
-                    <h1 id="galeria-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
-                        Imágenes de las diferentes actividades que realiza la fundación
+                <div class="text-center mb-16 sm:mb-20 reveal">
+                    <span class="inline-block text-[0.7rem] font-bold tracking-[0.15em] uppercase text-brand-dark mb-4 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100">Trabajo en Campo</span>
+                    <h1 id="galeria-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
+                        Registro Fotográfico <br class="hidden sm:block"> de Actividades
                     </h1>
                     <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-medium">
-                        A continuación, presentamos nuestra vinculación comunitaria, desarrollo de emprendimientos y visitas territoriales.
+                        Explora visualmente nuestra vinculación comunitaria, el desarrollo de emprendimientos y las visitas en territorio ecuatoriano.
+                    </p>
+                    <p class="text-[0.65rem] text-blue-600 bg-blue-50 rounded-full px-4 py-2 inline-block mt-6 font-bold border border-blue-200 uppercase tracking-widest shadow-sm">
+                        <i data-lucide="mouse-pointer-click" class="inline h-3 w-3 mr-1.5 -mt-0.5"></i> Pasa el cursor sobre las imágenes
                     </p>
                 </div>
 
-                <!-- Grid de Tarjetas Documentales -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 reveal reveal-delay-1">
+                <!-- GRID DE GALERÍA CON EFECTOS CSS PREMIUM -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal reveal-delay-1">
 
-                    <!-- Tarjeta 1 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo1.jpg" alt="Finca de naranjas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Productive orange farm where the fruit is not brought to market due to low prices.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo1.jpg" alt="Finca de naranjas" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Productive orange farm where the fruit is not brought to market due to low prices.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo2.jpg" alt="Proceso cacao" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Resultado del proceso de elaboración de derivados del cacao emprendimiento familiar y/o social.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo2.jpg" alt="Proceso cacao" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Resultado del proceso de elaboración de derivados del cacao emprendimiento familiar y/o social.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo3.jpg" alt="Las Naves" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Promoviendo los emprendimientos en unidades educativas rurales cantón Las Naves provincia de Bolívar.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo3.jpg" alt="Las Naves" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Promoviendo los emprendimientos en unidades educativas rurales cantón Las Naves provincia de Bolívar.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 4 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo4.jpg" alt="San Luis de Pambil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Visita al rector de la Unidad Educativa Fiscal Gonzalo Pizarro de la Parroquia San Luís de Pambil, cantón Las Naves.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo4.jpg" alt="San Luis de Pambil" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Visita al rector de la Unidad Educativa Fiscal Gonzalo Pizarro de la Parroquia San Luís de Pambil, cantón Las Naves.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 5 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo5.jpg" alt="Quinsaloma" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Rector de la Unidad Educativa fiscal 16 de mayo del cantón Quinsaloma, provincia de Los Ríos.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo5.jpg" alt="Quinsaloma" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Rector de la Unidad Educativa fiscal 16 de mayo del cantón Quinsaloma, provincia de Los Ríos.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 6 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo6.jpg" alt="Pangua Capitan Galo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Visita pa orientación Vocacional y profesional a la Unidad Educativa Capitán Galo Miño, en la parroquia las Juntas, cantón Pangua.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo6.jpg" alt="Pangua Capitan Galo" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Visita pa orientación Vocacional y profesional a la Unidad Educativa Capitán Galo Miño, en la parroquia las Juntas, cantón Pangua.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 7 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo7.jpg" alt="Moraspungo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Visita a la Unidad Educativa Moraspungo, parroquia Moraspungo, cantón Pangua, provincia de Cotopaxi.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo7.jpg" alt="Moraspungo" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Visita a la Unidad Educativa Moraspungo, parroquia Moraspungo, cantón Pangua, provincia de Cotopaxi.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 8 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo8.jpg" alt="Conocimientos empíricos" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Los conocimientos empíricos como fuente de ingreso de algunos habitantes del sector de las zonas rurales.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo8.jpg" alt="Conocimientos empíricos" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Los conocimientos empíricos como fuente de ingreso de algunos habitantes del sector de las zonas rurales.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 9 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo9.jpg" alt="Capacitación Pangua" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Capacitación sobre liderazgo, trabajo en equipo y manejo de habilidades blandas del personal docente de la Unidad Educativa Pangua.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo9.jpg" alt="Capacitación Pangua" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Capacitación sobre liderazgo, trabajo en equipo y manejo de habilidades blandas del personal docente de la Unidad Educativa Pangua.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 10 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo10.jpg" alt="Bebé en clase" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Imágenes que hablan solas.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo10.jpg" alt="Bebé en clase" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Imágenes que hablan solas.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 11 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo11.jpg" alt="Reunión Quinsaloma" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Reunión con propietarios de fincas agrícolas productivas del cantón Quinsaloma de la provincia de Los Ríos.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo11.jpg" alt="Reunión Quinsaloma" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Reunión con propietarios de fincas agrícolas productivas del cantón Quinsaloma de la provincia de Los Ríos.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 12 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo12.jpg" alt="Finca Cacaotera" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Visita a la finca cacaotera donde se elabora insumos naturales para la producción de cacao.
-                            </p>
+                    <div class="gallery-card">
+                        <img src="Actividad_de_campo12.jpg" alt="Finca Cacaotera" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Visita a la finca cacaotera donde se elabora insumos naturales para la producción de cacao.</p>
                         </div>
                     </div>
 
-                    <!-- Tarjeta 13 -->
-                    <div class="flex flex-col bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all duration-300 ring-1 ring-slate-200 overflow-hidden group sm:col-span-2 lg:col-span-1">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                            <img src="Actividad_de_campo13.jpg" alt="Marquesina de secado" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 flex-1 flex items-center border-t border-slate-100">
-                            <p class="text-sm font-medium text-slate-600 leading-relaxed text-center w-full">
-                                Marquesina para el secado higiénico del cacao.
-                            </p>
+                    <!-- Tarjeta 13: Ahora es exactamente igual a las demás y centrada en pantallas grandes -->
+                    <div class="gallery-card lg:col-start-2">
+                        <img src="Actividad_de_campo13.jpg" alt="Marquesina de secado" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Marquesina para el secado higiénico del cacao.</p>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="mt-16 text-center reveal reveal-delay-2">
-                    <p class="text-slate-500 text-base font-medium mb-6">Conoce más sobre el impacto de la Fundación SRTV.</p>
-                    <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-200 text-slate-800 font-bold text-sm hover:bg-slate-300 transition-colors shadow-sm">
-                        <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i>
-                        Volver a la página principal
+                <div class="mt-20 text-center reveal reveal-delay-2">
+                    <p class="text-slate-600 text-base font-medium mb-6">Descubre todo lo que ofrecemos para tu desarrollo.</p>
+                    <a href="index.html" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-slate-900 text-white font-bold text-sm hover:bg-blue-600 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                        <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i> Volver a la página principal
                     </a>
                 </div>
-
             </div>
         </section>
     </main>
 
     <!-- ═══════════════════════════════════════
-         FOOTER SIMPLE PARA PÁGINAS INTERNAS
+         FOOTER + CONTACTO (ESTILO CRISTAL)
     ═══════════════════════════════════════ -->
-    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t-[6px] border-brand-dark" role="contentinfo">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            
-            <img src="edb7c877-c8ad-4dc1-9f5c-687fb5980f6a.jpg" alt="Logo Fundación SRTV" class="h-16 w-auto object-contain rounded-xl opacity-80 mb-6 grayscale">
-            
-            <p class="text-slate-400 text-base mb-6 font-medium text-center max-w-sm">¿Quieres ser parte de nuestros proyectos o solicitar una capacitación?</p>
-            <a href="index.html#contacto" class="px-8 py-3.5 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-500 transition-colors shadow-lg text-sm mb-12 flex items-center gap-2">
-                <i data-lucide="mail" class="h-4 w-4"></i>
-                Escríbenos
-            </a>
-            
-            <div class="w-full pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6 text-slate-500 text-sm font-medium">
-                <p>&copy; 2026 Fundación Educativa Superando Retos Transformando Vidas.</p>
-                <div class="flex gap-4" role="list" aria-label="Redes sociales">
-                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Facebook">
+    <footer id="contacto" class="bg-slate-900 text-white pt-24 pb-12 border-t-[8px] border-brand-dark relative overflow-hidden" role="contentinfo">
+        <!-- Decoración de fondo footer -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-16 items-start">
+                
+                <div class="reveal">
+                    <span class="inline-block text-[0.75rem] font-black tracking-[0.15em] uppercase text-blue-400 mb-6 bg-blue-900/30 px-5 py-2 rounded-full border border-blue-800/50">Línea Directa</span>
+                    <h2 class="text-4xl sm:text-5xl font-black mb-8 leading-tight text-white">Conversemos sobre tu futuro</h2>
+                    <p class="text-slate-300 mb-12 max-w-md text-base sm:text-lg leading-relaxed font-medium">
+                        Reserva una entrevista gratuita o contáctanos directamente para ser parte de nuestros proyectos y capacitaciones.
+                    </p>
+
+                    <address class="not-italic space-y-6">
+                        <a href="mailto:info@fundacionsuperandoretostransformandovidas.org" class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="Enviar correo">
+                            <div class="flex h-14 w-14 bg-slate-800/80 backdrop-blur-sm rounded-2xl group-hover:bg-blue-600 transition-colors items-center justify-center flex-shrink-0 border border-slate-700 shadow-lg">
+                                <i data-lucide="mail" class="h-6 w-6 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-sm font-semibold break-all mt-1 leading-snug">info@<br>fundacionsuperandoretostransformandovidas.org</span>
+                        </a>
+                        <a href="https://wa.me/593997841341" target="_blank" rel="noopener noreferrer" class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="WhatsApp">
+                            <div class="flex h-14 w-14 bg-slate-800/80 backdrop-blur-sm rounded-2xl group-hover:bg-blue-600 transition-colors items-center justify-center flex-shrink-0 border border-slate-700 shadow-lg">
+                                <i data-lucide="smartphone" class="h-6 w-6 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-sm font-semibold mt-1">099 784 1341 (WhatsApp)</span>
+                        </a>
+                        <a href="tel:023082399" class="flex items-center gap-5 text-slate-300 hover:text-white transition-colors group" aria-label="Teléfono">
+                            <div class="flex h-14 w-14 bg-slate-800/80 backdrop-blur-sm rounded-2xl group-hover:bg-blue-600 transition-colors items-center justify-center flex-shrink-0 border border-slate-700 shadow-lg">
+                                <i data-lucide="phone" class="h-6 w-6 text-blue-400 group-hover:text-white transition-colors" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-sm font-semibold mt-1">02 3082 399</span>
+                        </a>
+                    </address>
+                </div>
+
+                <div class="reveal reveal-delay-2">
+                    <div class="bg-slate-800/40 backdrop-blur-xl rounded-[2.5rem] p-8 sm:p-10 border border-slate-700/50 shadow-2xl relative overflow-hidden">
+                        <!-- Brillo decorativo superior del formulario -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-sky-400 to-emerald-400 opacity-80"></div>
+                        
+                        <h3 class="text-2xl font-black mb-8 flex items-center gap-4 text-white">
+                            <span class="flex h-12 w-12 rounded-xl bg-blue-500/20 items-center justify-center flex-shrink-0 border border-blue-500/30 text-blue-400">
+                                <i data-lucide="calendar-check" class="h-6 w-6"></i>
+                            </span>
+                            Agendar Entrevista
+                        </h3>
+
+                        <!-- FormSubmit -->
+                        <form action="https://formsubmit.co/info@fundacionsuperandoretostransformandovidas.org" method="POST" class="space-y-6" novalidate>
+                            <input type="hidden" name="_subject" value="Nueva reserva de entrevista desde Galería">
+                            <input type="hidden" name="_next" value="https://fundacionsuperandoretostransformandovidas.org/galeria.html">
+                            <input type="hidden" name="_template" value="table">
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="f-nombres" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">Nombres <span class="text-blue-500">*</span></label>
+                                    <input id="f-nombres" type="text" name="Nombres" required class="form-input" placeholder="Ej. Carlos">
+                                </div>
+                                <div>
+                                    <label for="f-apellidos" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">Apellidos <span class="text-blue-500">*</span></label>
+                                    <input id="f-apellidos" type="text" name="Apellidos" required class="form-input" placeholder="Ej. Pérez">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                <div class="sm:col-span-1">
+                                    <label for="f-edad" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">Edad</label>
+                                    <input id="f-edad" type="number" name="Edad" min="12" max="99" class="form-input" placeholder="—">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="f-fecha" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">Fecha <span class="text-blue-500">*</span></label>
+                                    <input id="f-fecha" type="date" name="Fecha" required class="form-input [color-scheme:dark]">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="f-tel" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">WhatsApp <span class="text-blue-500">*</span></label>
+                                    <input id="f-tel" type="tel" name="Telefono" required class="form-input" placeholder="09X XXX XXXX">
+                                </div>
+                                <div>
+                                    <label for="f-email" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">Correo <span class="text-blue-500">*</span></label>
+                                    <input id="f-email" type="email" name="Email" required class="form-input" placeholder="correo@ejemplo.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="f-notas" class="block text-[0.65rem] text-slate-400 mb-2 font-black uppercase tracking-widest pl-1">Notas / Duda principal</label>
+                                <textarea id="f-notas" name="Notas" rows="3" class="form-input resize-none" placeholder="¿En qué programa tienes interés?"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 mt-4 text-sm uppercase tracking-widest transform hover:-translate-y-1">
+                                <i data-lucide="send" class="h-4 w-4" aria-hidden="true"></i> Enviar Solicitud
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom bar -->
+            <div class="pt-12 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6 text-slate-500 text-sm font-medium">
+                <div class="flex items-center gap-3">
+                    <img src="logo.jpg" alt="Logo mini" class="h-8 w-8 rounded-full grayscale opacity-50">
+                    <p>&copy; 2026 Fundación SRTV. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="p-3 rounded-full hover:bg-slate-800 hover:text-white transition-colors bg-slate-800/50 border border-slate-700" aria-label="Facebook">
                         <i data-lucide="facebook" class="h-4 w-4" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Instagram">
+                    <a href="#" class="p-3 rounded-full hover:bg-slate-800 hover:text-white transition-colors bg-slate-800/50 border border-slate-700" aria-label="Instagram">
                         <i data-lucide="instagram" class="h-4 w-4" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -348,11 +424,8 @@
 
     <script>
         lucide.createIcons();
-
         const nav = document.getElementById('main-nav');
-        const onScroll = () => {
-            nav.classList.toggle('nav-scrolled', window.scrollY > 20);
-        };
+        const onScroll = () => { nav.classList.toggle('nav-scrolled', window.scrollY > 20); };
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
