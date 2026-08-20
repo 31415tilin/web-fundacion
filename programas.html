@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas y Cursos | Fundación Educativa Superando Retos Transformando Vidas</title>
+
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+    <meta name="description" content="Oferta académica, programas de orientación y cursos prácticos de la Fundación Educativa Superando Retos Transformando Vidas en Ecuador.">
+    <meta name="theme-color" content="#1e3a8a">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { dark: '#1e3a8a', hover: '#1e40af', light: '#f8fafc', muted: '#e2e8f0' }
+                    },
+                    boxShadow: {
+                        'card': '0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04)',
+                        'card-hover': '0 2px 4px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.08)',
+                        'btn': '0 1px 2px rgba(30,58,138,0.08), 0 4px 12px rgba(30,58,138,0.20)',
+                        'btn-hover': '0 2px 4px rgba(30,58,138,0.10), 0 8px 24px rgba(30,58,138,0.28)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.08s; }
+        .reveal-delay-2 { transition-delay: 0.16s; }
+        .reveal-delay-3 { transition-delay: 0.24s; }
+        .reveal-delay-4 { transition-delay: 0.32s; }
+        .section-label { display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #1e3a8a; margin-bottom: 0.75rem; }
+        .nav-scrolled { box-shadow: 0 1px 0 #e2e8f0, 0 8px 24px rgba(0,0,0,0.04); }
+        
+        .card-lift { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease; }
+        .card-lift:hover { transform: translateY(-8px); box-shadow: 0 4px 6px rgba(0,0,0,0.04), 0 20px 40px rgba(0,0,0,0.12), 0 40px 64px rgba(0,0,0,0.08); border-color: #93c5fd; }
+        
+        @media (prefers-reduced-motion: reduce) { .reveal, .card-lift { transition: none !important; opacity: 1; transform: none; } }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-brand-dark">
+
+    <!-- ═══════════════════════════════════════
+         NAVEGACIÓN FIJA
+    ═══════════════════════════════════════ -->
+    <header role="banner">
+        <nav id="main-nav" aria-label="Navegación principal" class="fixed top-0 z-50 w-full backdrop-blur-md bg-white/92 border-b border-slate-200/80 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-18 py-3">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group" aria-label="Regresar al Inicio">
+                        <img src="logo.jpg" alt="Logo Fundación" class="h-12 w-12 object-contain rounded-full shadow-sm group-hover:shadow-md transition-all border border-slate-100">
+                        <span class="font-bold text-sm text-brand-dark hidden sm:block max-w-[180px] leading-snug">Superando Retos<br>Transformando Vidas</span>
+                    </a>
+                    <div class="hidden lg:flex items-center space-x-0.5 xl:space-x-1" role="list">
+                        <a href="index.html#nosotros" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Quiénes Somos</a>
+                        <a href="#" class="px-3 py-2 text-brand-dark bg-blue-50 rounded-lg font-bold text-sm transition-all">Programas</a>
+                        <a href="index.html#guia-proyectos" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Guía</a>
+                        <a href="index.html#proyecto-quinsaloma" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Proyecto</a>
+                        <a href="galeria.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Galería</a>
+                        <a href="index.html#equipo" class="px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-all">Equipo</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="index.html#contacto" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-dark hover:bg-brand-hover transition-colors shadow-btn hover:shadow-btn-hover">Contacto</a>
+                        <button id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="menu" class="h-5 w-5" id="mobile-icon-open"></i>
+                            <i data-lucide="x" class="h-5 w-5 hidden" id="mobile-icon-close"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" role="navigation" aria-label="Menú móvil" class="lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-xl absolute w-full">
+                <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+                    <a href="index.html#nosotros" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Quiénes Somos</a>
+                    <a href="#" class="px-4 py-3 text-brand-dark bg-blue-50 rounded-lg font-bold text-sm transition-colors">Programas</a>
+                    <a href="index.html#guia-proyectos" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Guía de Proyectos</a>
+                    <a href="index.html#proyecto-quinsaloma" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Proyecto</a>
+                    <a href="galeria.html" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Galería</a>
+                    <a href="index.html#equipo" class="px-4 py-3 text-slate-700 hover:text-brand-dark hover:bg-blue-50 rounded-lg font-medium text-sm transition-colors">Equipo</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-28 sm:pt-36 pb-20 sm:pb-32 bg-slate-50 min-h-screen">
+        
+        <!-- ═══════════════════════════════════════
+             ENCABEZADO DE LA PÁGINA
+        ═══════════════════════════════════════ -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 reveal">
+            <span class="section-label">Nuestra Oferta</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-5 leading-tight">
+                Programas y Cursos
+            </h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-medium">
+                Desarrolla tus competencias y abre nuevas oportunidades profesionales con nuestra oferta académica diseñada para jóvenes y adultos.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 1: PROGRAMAS DE ORIENTACIÓN
+        ═══════════════════════════════════════ -->
+        <section aria-labelledby="programas-heading" class="mb-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-10 reveal">
+                    <div class="h-px bg-slate-200 flex-1"></div>
+                    <h2 id="programas-heading" class="text-2xl sm:text-3xl font-bold text-slate-800 tracking-tight px-4">
+                        Orientación Vocacional
+                    </h2>
+                    <div class="h-px bg-slate-200 flex-1"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Programa 1 -->
+                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="h-1.5 w-full bg-gradient-to-r from-blue-500 to-sky-400"></div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-start justify-between mb-6">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-[0.65rem] font-bold bg-blue-50 text-blue-700 uppercase tracking-widest">Bachillerato</span>
+                                <span class="flex h-10 w-10 rounded-xl bg-blue-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="compass" class="h-5 w-5 text-blue-700" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
+                                Taller de Orientación con Test de Intereses
+                            </h3>
+                            <p class="text-xs text-slate-400 font-semibold mb-5 flex items-center gap-1.5">
+                                <i data-lucide="clock" class="h-4 w-4" aria-hidden="true"></i> 40 horas (Intensivo) · Presencial / Híbrida
+                            </p>
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
+                                Identifica tus intereses vocacionales mediante instrumentos psicopedagógicos y elabora un plan personal de formación estructurado.
+                            </p>
+                            <div class="mt-auto pt-6 border-t border-slate-100">
+                                <a href="index.html#contacto" class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors shadow-sm">
+                                    Inscribirse <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Programa 2 -->
+                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group relative">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-[0.65rem] font-bold bg-brand-dark text-white shadow-sm uppercase tracking-widest">Popular</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-gradient-to-r from-indigo-500 to-purple-400"></div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-start justify-between mb-6">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-[0.65rem] font-bold bg-indigo-50 text-indigo-700 uppercase tracking-widest">Bach. / Superior</span>
+                                <span class="flex h-10 w-10 rounded-xl bg-indigo-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="trending-up" class="h-5 w-5 text-indigo-700" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
+                                Taller Intensivo de Orientación Vocacional
+                            </h3>
+                            <p class="text-xs text-slate-400 font-semibold mb-5 flex items-center gap-1.5">
+                                <i data-lucide="clock" class="h-4 w-4" aria-hidden="true"></i> 40 horas · Presencial / Híbrida
+                            </p>
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
+                                Análisis de las carreras más demandadas (IA, Energías renovables) y oferta académica en Ecuador con más de 4.500 carreras.
+                            </p>
+                            <div class="mt-auto pt-6 border-t border-slate-100">
+                                <a href="index.html#contacto" class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors shadow-sm">
+                                    Inscribirse <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Programa 3 -->
+                    <article class="reveal reveal-delay-3 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="h-1.5 w-full bg-gradient-to-r from-cyan-500 to-teal-400"></div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-start justify-between mb-6">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-[0.65rem] font-bold bg-cyan-50 text-cyan-700 uppercase tracking-widest">Universitarios</span>
+                                <span class="flex h-10 w-10 rounded-xl bg-cyan-50 items-center justify-center flex-shrink-0">
+                                    <i data-lucide="lightbulb" class="h-5 w-5 text-cyan-700" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">
+                                Autoconocimiento y Toma de Decisiones
+                            </h3>
+                            <p class="text-xs text-slate-400 font-semibold mb-5 flex items-center gap-1.5">
+                                <i data-lucide="clock" class="h-4 w-4" aria-hidden="true"></i> 8 semanas (Fines de semana) · Híbrida
+                            </p>
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-8">
+                                Estrategias de inserción laboral, elaboración de CV profesional, LinkedIn y emprendimiento comunitario.
+                            </p>
+                            <div class="mt-auto pt-6 border-t border-slate-100">
+                                <a href="index.html#contacto" class="btn-primary w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm hover:bg-brand-hover transition-colors shadow-sm">
+                                    Inscribirse <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 2: CURSOS PRÁCTICOS
+        ═══════════════════════════════════════ -->
+        <section aria-labelledby="cursos-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex items-center gap-4 mb-10 reveal">
+                    <div class="h-px bg-slate-200 flex-1"></div>
+                    <h2 id="cursos-heading" class="text-2xl sm:text-3xl font-bold text-slate-800 tracking-tight px-4">
+                        Cursos Prácticos
+                    </h2>
+                    <div class="h-px bg-slate-200 flex-1"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Curso 1 -->
+                    <article class="reveal reveal-delay-1 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
+                            <img src="promo1.jpg" alt="Flyer promocional: Habilidades Blandas en Entornos Laborales" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Habilidades Blandas en Entornos Laborales</p>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span> Inscripciones Abiertas
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">Importancia de las Habilidades Blandas</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">Las habilidades blandas como competencias transversales que inciden directamente en la eficacia y sostenibilidad del entorno laboral. Descubre tus fortalezas y trabaja tus áreas de mejora.</p>
+                            <ul class="space-y-2 mb-8" role="list">
+                                <li class="flex items-start gap-2.5 text-sm font-medium text-slate-600"><i data-lucide="circle-help" class="h-4 w-4 text-blue-500 flex-shrink-0" aria-hidden="true"></i> ¿Qué habilidades son tu fortaleza?</li>
+                                <li class="flex items-start gap-2.5 text-sm font-medium text-slate-600"><i data-lucide="circle-help" class="h-4 w-4 text-blue-500 flex-shrink-0" aria-hidden="true"></i> ¿En cuáles crees que tienes deficiencias?</li>
+                            </ul>
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold"><i data-lucide="users" class="h-4 w-4" aria-hidden="true"></i> Jóvenes y profesionales</span>
+                                <a href="index.html#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                    Inscribirme <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Curso 2 -->
+                    <article class="reveal reveal-delay-2 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
+                            <img src="promo2.jpg" alt="Flyer promocional: Emprendimiento y Pensamiento Estratégico" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Emprendimiento y Pensamiento Estratégico</p>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span> Inscripciones Abiertas
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">Puntos Clave del Proyecto Empresarial Exitoso</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">El emprendimiento y los negocios se sustentan en una visión clara y resiliente. Aprende planificación estratégica, gestión financiera, marketing y liderazgo efectivo para escalar tus proyectos.</p>
+                            <div class="flex flex-wrap gap-2 mb-8" role="list">
+                                <span role="listitem" class="inline-flex items-center px-2 py-1 rounded-md text-[0.65rem] font-bold bg-slate-100 text-brand-dark border border-slate-200 uppercase tracking-widest">Liderazgo</span>
+                                <span role="listitem" class="inline-flex items-center px-2 py-1 rounded-md text-[0.65rem] font-bold bg-slate-100 text-brand-dark border border-slate-200 uppercase tracking-widest">Finanzas</span>
+                                <span role="listitem" class="inline-flex items-center px-2 py-1 rounded-md text-[0.65rem] font-bold bg-slate-100 text-brand-dark border border-slate-200 uppercase tracking-widest">Marketing</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold"><i data-lucide="lightbulb" class="h-4 w-4" aria-hidden="true"></i> Emprendedores</span>
+                                <a href="index.html#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                    Inscribirme <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Curso 3 -->
+                    <article class="reveal reveal-delay-3 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
+                            <img src="promo3.jpg" alt="Flyer promocional: Investigación Aplicada al Desarrollo Social" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Investigación Aplicada al Desarrollo Social</p>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span> Inscripciones Abiertas
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">Investigación Aplicada e Investigación Científica</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed flex-1 mb-5">Aprende cómo la investigación aplicada resuelve problemas concretos de comunidades, y cómo la investigación científica forma profesionales críticos en la educación superior.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                                    <p class="text-[0.65rem] font-bold text-brand-dark mb-1 uppercase tracking-widest">Social</p>
+                                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Enfoque participativo y comunitario</p>
+                                </div>
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                                    <p class="text-[0.65rem] font-bold text-brand-dark mb-1 uppercase tracking-widest">Científica</p>
+                                    <p class="text-xs text-slate-600 leading-relaxed font-medium">Metodologías sistemáticas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold"><i data-lucide="graduation-cap" class="h-4 w-4" aria-hidden="true"></i> Universitarios</span>
+                                <a href="index.html#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                    Inscribirme <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Curso 4 -->
+                    <article class="reveal reveal-delay-4 card-lift flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card group">
+                        <div class="relative h-64 overflow-hidden flex-shrink-0 bg-slate-100">
+                            <img src="promo4.jpg" alt="Flyer promocional: Cómo Obtener Fondos No Reembolsables" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute bottom-0 left-0 right-0 px-8 py-6 bg-gradient-to-t from-slate-900/90 to-transparent">
+                                <p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Curso práctico</p>
+                                <p class="text-white text-lg font-bold leading-tight">Cómo Obtener Fondos No Reembolsables</p>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-dark shadow-md">
+                                    <span class="h-2 w-2 rounded-full bg-brand-dark animate-pulse" aria-hidden="true"></span> Inscripciones Abiertas
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-brand-dark transition-colors">Fondos No Reembolsables para Proyectos</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5 flex-1">Recursos para impulsar el desarrollo comunitario y emprendimientos. Aprende a postular ante agencias de cooperación, gobiernos, Unión Europea y fundaciones privadas.</p>
+                            <div class="grid grid-cols-3 gap-3 mb-8 text-center">
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                                    <i data-lucide="users-round" class="h-5 w-5 text-brand-dark mx-auto mb-1.5" aria-hidden="true"></i>
+                                    <p class="text-[0.65rem] font-bold text-slate-700 leading-tight">ONGs</p>
+                                </div>
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                                    <i data-lucide="building-2" class="h-5 w-5 text-brand-dark mx-auto mb-1.5" aria-hidden="true"></i>
+                                    <p class="text-[0.65rem] font-bold text-slate-700 leading-tight">Comunidades</p>
+                                </div>
+                                <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                                    <i data-lucide="award" class="h-5 w-5 text-brand-dark mx-auto mb-1.5" aria-hidden="true"></i>
+                                    <p class="text-[0.65rem] font-bold text-slate-700 leading-tight">Cívicas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+                                <span class="inline-flex items-center gap-2 text-xs text-slate-500 font-bold"><i data-lucide="circle-dollar-sign" class="h-4 w-4" aria-hidden="true"></i> Proyectos sociales</span>
+                                <a href="index.html#contacto" class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-dark hover:text-brand-hover transition-colors group/link">
+                                    Inscribirme <i data-lucide="arrow-right" class="h-4 w-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER SIMPLE PARA PÁGINAS INTERNAS
+    ═══════════════════════════════════════ -->
+    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t-[6px] border-brand-dark" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <img src="logo.jpg" alt="Logo Fundación SRTV" class="h-16 w-16 object-contain rounded-full opacity-90 mb-6 bg-white p-1 shadow-lg">
+            <p class="text-slate-400 text-base mb-6 font-medium text-center max-w-sm">¿Tienes dudas sobre qué curso se adapta mejor a tu perfil?</p>
+            <a href="index.html#contacto" class="px-8 py-3.5 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/20 border border-blue-500 text-sm mb-12 flex items-center gap-2">
+                <i data-lucide="message-circle" class="h-4 w-4"></i> Consultar con un asesor
+            </a>
+            <div class="w-full pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6 text-slate-500 text-sm font-medium">
+                <p>&copy; 2026 Fundación Educativa Superando Retos Transformando Vidas.</p>
+                <div class="flex gap-4" role="list" aria-label="Redes sociales">
+                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Facebook">
+                        <i data-lucide="facebook" class="h-4 w-4" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="p-2.5 rounded-xl hover:bg-slate-800 hover:text-white transition-colors bg-slate-900 border border-slate-800" role="listitem" aria-label="Instagram">
+                        <i data-lucide="instagram" class="h-4 w-4" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const nav = document.getElementById('main-nav');
+        const onScroll = () => { nav.classList.toggle('nav-scrolled', window.scrollY > 20); };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        const toggle = document.getElementById('mobile-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('mobile-icon-open');
+        const iconClose = document.getElementById('mobile-icon-close');
+        toggle.addEventListener('click', () => {
+            const open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+            iconOpen.classList.toggle('hidden', open);
+            iconClose.classList.toggle('hidden', !open);
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', false);
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealEls.forEach(el => revealObs.observe(el));
+    </script>
+</body>
+</html>
